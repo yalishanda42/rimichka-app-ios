@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11262BFC22318F1B00B9E29A /* EscapeStringForURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */; };
 		11824AC9222DCE39007DB98C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AC8222DCE39007DB98C /* AppDelegate.swift */; };
 		11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */; };
 		11824ACE222DCE39007DB98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11824ACC222DCE39007DB98C /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeStringForURL.swift; sourceTree = "<group>"; };
 		11824AC5222DCE39007DB98C /* Rimichka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rimichka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11824AC8222DCE39007DB98C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeMeViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11262BFA22318EEF00B9E29A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		11824ABC222DCE39007DB98C = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		11824AC7222DCE39007DB98C /* Rimichka */ = {
 			isa = PBXGroup;
 			children = (
+				11262BFA22318EEF00B9E29A /* Helpers */,
 				11824AC8222DCE39007DB98C /* AppDelegate.swift */,
 				11824AEB222DE135007DB98C /* Views */,
 				11824ADF222DD139007DB98C /* ViewControllers */,
@@ -187,6 +198,7 @@
 				11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */,
 				11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */,
 				11824AE4222DD18B007DB98C /* Networking.swift in Sources */,
+				11262BFC22318F1B00B9E29A /* EscapeStringForURL.swift in Sources */,
 				11824AC9222DCE39007DB98C /* AppDelegate.swift in Sources */,
 				11824AD1222DCE39007DB98C /* Rimichka.xcdatamodeld in Sources */,
 			);

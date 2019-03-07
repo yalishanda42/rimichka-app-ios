@@ -10,26 +10,30 @@ import UIKit
 
 class RhymeMeViewController: UIViewController {
 
-    @IBOutlet weak var rhymeInputField: UITextField!
+    var rhymes: RhymesParser.Rhymes!
     
-    var rhymes: RhymesParser.Rhymes?
+    
+    @IBOutlet weak var rhymeInput: UITextField!
     
     @IBAction func onTapRhymeButton(_ sender: UIButton) {
-        guard let rhyme = rhymeInputField.text else { return }
+        guard let rhyme = rhymeInput.text else { return }
         
         RhymesParser.getRhymesForWord(word: rhyme) { [weak self] (result) in
             guard let result = result else {
                 return
             }
             
-            self?.rhymes = result
-            self?.performSegue(withIdentifier: "showRhymesSegue", sender: self)
+            DispatchQueue.main.async {
+                self?.rhymes = result
+                self?.performSegue(withIdentifier: "showRhymesSegue", sender: self)
+            }
+            
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? RhymesViewController {
-            destination.rhymedWord = self.rhymeInputField.text!
+            destination.rhymedWord = self.rhymeInput.text!
             destination.rhymes = self.rhymes
         }
         

@@ -38,7 +38,7 @@ class RhymesParser {
     
     
     static func getRhymesForWord(word: String, completion: @escaping (Rhymes?) -> ()) {
-        guard let url = URL(string: "http://rimichka.com/?word=\(word)&json=1") else {
+        guard let url = URL(string: "http://rimichka.com/?word=\(word)&json=1".URLescaped) else {
             print("invalid URL!")
             completion(nil)
             return
@@ -54,3 +54,5 @@ class RhymesParser {
         }
     }
 }
+
+
