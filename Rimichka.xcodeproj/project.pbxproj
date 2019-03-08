@@ -14,7 +14,6 @@
 		11824AD1222DCE39007DB98C /* Rimichka.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */; };
 		11824AD3222DCE3A007DB98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11824AD2222DCE3A007DB98C /* Assets.xcassets */; };
 		11824AD6222DCE3A007DB98C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11824AD4222DCE3A007DB98C /* LaunchScreen.storyboard */; };
-		11824ADE222DD10E007DB98C /* RhymesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824ADD222DD10D007DB98C /* RhymesViewController.swift */; };
 		11824AE2222DD182007DB98C /* RhymesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE1222DD182007DB98C /* RhymesParser.swift */; };
 		11824AE4222DD18B007DB98C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE3222DD18B007DB98C /* Networking.swift */; };
 		11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE9222DDD1C007DB98C /* WordCell.swift */; };
@@ -30,7 +29,6 @@
 		11824AD2222DCE3A007DB98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11824AD5222DCE3A007DB98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11824AD7222DCE3A007DB98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11824ADD222DD10D007DB98C /* RhymesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesViewController.swift; sourceTree = "<group>"; };
 		11824AE1222DD182007DB98C /* RhymesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesParser.swift; sourceTree = "<group>"; };
 		11824AE3222DD18B007DB98C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		11824AE9222DDD1C007DB98C /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */,
-				11824ADD222DD10D007DB98C /* RhymesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11824AE2222DD182007DB98C /* RhymesParser.swift in Sources */,
-				11824ADE222DD10E007DB98C /* RhymesViewController.swift in Sources */,
 				11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */,
 				11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */,
 				11824AE4222DD18B007DB98C /* Networking.swift in Sources */,

@@ -10,10 +10,10 @@ import UIKit
 
 class RhymeMeViewController: UIViewController {
 
-    var rhymes: RhymesParser.Rhymes!
-    
-    
+    var rhymes: RhymesParser.Rhymes?
+        
     @IBOutlet weak var rhymeInput: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func onTapRhymeButton(_ sender: UIButton) {
         guard let rhyme = rhymeInput.text else { return }
@@ -25,19 +25,10 @@ class RhymeMeViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self?.rhymes = result
-                self?.performSegue(withIdentifier: "showRhymesSegue", sender: self)
+                self?.tableView.reloadData()
             }
             
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? RhymesViewController {
-            destination.rhymedWord = self.rhymeInput.text!
-            destination.rhymes = self.rhymes
-        }
-        
-    }
-    
 }
 
