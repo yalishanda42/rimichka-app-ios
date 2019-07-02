@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension String {
-    var URLescaped : String {
-        return self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-    }
+  var URLescaped: String {
+    return self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+  }
 }
