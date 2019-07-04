@@ -53,7 +53,7 @@ class DatabaseManager {
   
   func deleteRhyme(_ rhyme: RhymeType) {
     let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "RhymeEntity")
-    request.predicate = NSPredicate(format: "word = %@ AND strength = %d AND parentWord = %@", rhyme.word, rhyme.strength, rhyme.parentWord ?? "")
+    request.predicate = NSPredicate(format: "word = %@ AND strength = %d AND parentWord = %@", rhyme.word, rhyme.strength, rhyme.parentWord)
     request.fetchLimit = 1
     do {
       let result = try context.fetch(request)

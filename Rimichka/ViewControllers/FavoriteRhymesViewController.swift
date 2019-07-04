@@ -41,7 +41,7 @@ extension FavoriteRhymesViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     let rhyme = favoriteRhymes.list[indexPath.row]
-    cell.nameLabel.text = "\(rhyme.parentWord ?? "") -> \(rhyme.word)"
+    cell.nameLabel.text = "\(rhyme.parentWord) -> \(rhyme.word)"
     cell.markFavorite()
     cell.delegate = self
     return cell

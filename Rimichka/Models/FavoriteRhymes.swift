@@ -38,18 +38,15 @@ class FavoriteRhymes {
   }
   
   func contains(_ rhyme: RhymePair) -> Bool {
-    assert(rhyme.parentWord != nil, "No parent word for rhyme \(rhyme.word)")
     return list.contains(rhyme)
   }
   
   func add(_ rhyme: RhymePair) {
-    assert(rhyme.parentWord != nil, "No parent word for rhyme \(rhyme.word)")
     database.saveRhyme(rhyme)
     list.append(rhyme)
   }
   
   func remove(_ rhyme: RhymePair) {
-    assert(rhyme.parentWord != nil, "No parent word for rhyme \(rhyme.word)")
     database.deleteRhyme(rhyme)
     list.removeAll { $0 == rhyme }
   }

@@ -17,9 +17,10 @@
 		11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE9222DDD1C007DB98C /* WordCell.swift */; };
 		1A1F43D722CE054000C2E61F /* Rimichka.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */; };
 		1A1F43DB22CE2CF800C2E61F /* FavoriteRhymesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43DA22CE2CF800C2E61F /* FavoriteRhymesViewController.swift */; };
+		1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E022CE64C100C2E61F /* RhymePair.swift */; };
+		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
 		1A320FF522CCC534008C1CE8 /* FavoriteRhymes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */; };
 		1A320FFB22CCCE3C008C1CE8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */; };
-		1AF2702B22CBA657005C7213 /* RhymesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF2702A22CBA657005C7213 /* RhymesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,10 @@
 		1A1F43DA22CE2CF800C2E61F /* FavoriteRhymesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesViewController.swift; sourceTree = "<group>"; };
 		1A1F43DC22CE3AD100C2E61F /* RhymeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RhymeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1A1F43DD22CE3AD100C2E61F /* RhymeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RhymeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1A1F43E022CE64C100C2E61F /* RhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymePair.swift; sourceTree = "<group>"; };
+		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
 		1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymes.swift; sourceTree = "<group>"; };
 		1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		1AF2702A22CBA657005C7213 /* RhymesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,8 @@
 		11824AE0222DD15D007DB98C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1AF2702A22CBA657005C7213 /* RhymesList.swift */,
+				1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */,
+				1A1F43E022CE64C100C2E61F /* RhymePair.swift */,
 				1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */,
 				1A1F43DC22CE3AD100C2E61F /* RhymeEntity+CoreDataClass.swift */,
 				1A1F43DD22CE3AD100C2E61F /* RhymeEntity+CoreDataProperties.swift */,
@@ -217,10 +220,11 @@
 				11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */,
 				11824AE4222DD18B007DB98C /* Networking.swift in Sources */,
 				11262BFC22318F1B00B9E29A /* EscapeStringForURL.swift in Sources */,
+				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
 				11824AC9222DCE39007DB98C /* AppDelegate.swift in Sources */,
 				1A1F43DB22CE2CF800C2E61F /* FavoriteRhymesViewController.swift in Sources */,
-				1AF2702B22CBA657005C7213 /* RhymesList.swift in Sources */,
 				1A320FF522CCC534008C1CE8 /* FavoriteRhymes.swift in Sources */,
+				1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */,
 				1A1F43D722CE054000C2E61F /* Rimichka.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

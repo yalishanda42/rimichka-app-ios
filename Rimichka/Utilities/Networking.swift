@@ -48,7 +48,7 @@ class Networking {
         var rhymesResult: [RhymePair] = []
         if let rhymes = try? JSONDecoder().decode([FetchedRhyme].self, from: data) {
           for rhyme in rhymes {
-            let rhymePair = RhymePair(word: rhyme.word, strength: rhyme.strength, parentWord: word)
+            let rhymePair = RhymePair(word: rhyme.wrd, strength: rhyme.pri, parentWord: word)
             rhymesResult.append(rhymePair)
           }
           completion(rhymesResult)
