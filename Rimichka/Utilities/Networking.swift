@@ -13,6 +13,12 @@ class Networking {
   static let shared = Networking()
   private init() {}
   
+  
+  /// Fetch data asynchronously from any URL.
+  ///
+  /// - Parameters:
+  ///   - url: The URL with the data to be fetched.
+  ///   - completion: Completion handler closure with the fetched result (nil for failure).
   func getData(from url: URL, completion: @escaping (Data?) -> ()) {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     
@@ -25,7 +31,12 @@ class Networking {
       }.resume()
   }
   
-  func getRhymesForWord(word: String, completion: @escaping (RhymesList?) -> ()) {
+  /// Fetch the rhymes for a given word from http://rimichka.com into a RhymesList object.
+  ///
+  /// - Parameters:
+  ///   - word: The word to be rhymed, in Bulgarian.
+  ///   - completion: Completion handler closure with the fetched result (nil for failure).
+  func getRhymesForWord(word: String, completion: @escaping ([RhymePair]?) -> ()) {
     guard let url = URL(string: "http://rimichka.com/?word=\(word)&json=1".URLescaped) else {
       print("invalid URL!")
       completion(nil)
@@ -34,8 +45,15 @@ class Networking {
     
     getData(from: url) { (data) in
       if let data = data {
-        let rhymes = try? JSONDecoder().decode(RhymesList.self, from: data)
-        completion(rhymes)
+        var rhymesResult: [RhymePair] = []
+        if let rhymes = try? JSONDecoder().decode([FetchedRhyme].self, from: data) {
+          for rhyme in rhymes {
+            let rhymePair = RhymePair(word: rhyme.word, strength: rhyme.strength, parentWord: word)
+            rhymesResult.append(rhymePair)
+          }
+          completion(rhymesResult)
+        }
+        completion(nil)
       } else {
         completion(nil)
       }

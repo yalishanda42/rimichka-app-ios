@@ -39,17 +39,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfc-Te-G5o">
                                 <rect key="frame" x="0.0" y="20" width="375" height="85"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Въведи дума на кирилица..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-2m-f8k">
-                                        <rect key="frame" x="20" y="5" width="335" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Въведи дума на кирилица..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-2m-f8k">
+                                        <rect key="frame" x="20" y="5" width="335" height="31"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                         <connections>
                                             <action selector="rhymeChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="iYL-cg-dWK"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="l1E-o7-nPQ"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuA-Ci-4Aa">
-                                        <rect key="frame" x="142" y="45" width="91" height="30"/>
+                                        <rect key="frame" x="142" y="46" width="91" height="30"/>
                                         <state key="normal" title="Римувай ме!"/>
                                         <connections>
                                             <action selector="onTapRhymeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sc6-Lu-PZf"/>
@@ -123,7 +124,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Начало" image="search-more-glyph" id="qBN-KJ-sga"/>
+                    <tabBarItem key="tabBarItem" title="Римички" image="search-more-glyph" id="qBN-KJ-sga"/>
                     <navigationItem key="navigationItem" id="hCH-mo-gPb"/>
                     <connections>
                         <outlet property="rhymeInput" destination="rbd-2m-f8k" id="cBg-Tg-KYb"/>
@@ -138,14 +139,72 @@
         <!--Любими рими-->
         <scene sceneID="6I9-kZ-VV1">
             <objects>
-                <viewController title="Любими рими" id="l75-fX-ZpF" sceneMemberID="viewController">
+                <viewController title="Любими рими" id="l75-fX-ZpF" customClass="FavoriteRhymesViewController" customModule="Rimichka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lPc-e5-vQM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BVz-EF-j13">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Favorite Rhymes Cell" id="X88-q6-COt" customClass="WordCell" customModule="Rimichka" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X88-q6-COt" id="o5E-yL-dDG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI5-1T-kqG">
+                                                    <rect key="frame" x="35" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-RU-xX0">
+                                                    <rect key="frame" x="330" y="7" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="bQU-Vc-cMN"/>
+                                                        <constraint firstAttribute="height" constant="30" id="nhG-2p-JBu"/>
+                                                    </constraints>
+                                                    <state key="normal" image="like"/>
+                                                    <connections>
+                                                        <action selector="onTapFavoriteButton:" destination="X88-q6-COt" eventType="touchUpInside" id="aPb-rw-Nyk"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RI5-1T-kqG" firstAttribute="leading" secondItem="o5E-yL-dDG" secondAttribute="leadingMargin" constant="20" id="EYR-Bw-bt5"/>
+                                                <constraint firstItem="D4p-RU-xX0" firstAttribute="centerY" secondItem="o5E-yL-dDG" secondAttribute="centerY" id="N0i-0B-nWE"/>
+                                                <constraint firstAttribute="trailing" secondItem="D4p-RU-xX0" secondAttribute="trailing" constant="15" id="UKF-N3-Gn7"/>
+                                                <constraint firstItem="RI5-1T-kqG" firstAttribute="centerY" secondItem="o5E-yL-dDG" secondAttribute="centerY" id="kfs-zY-GtX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteButton" destination="D4p-RU-xX0" id="yNm-UR-FPX"/>
+                                            <outlet property="nameLabel" destination="RI5-1T-kqG" id="G88-6W-hNK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l75-fX-ZpF" id="5SC-dV-gFQ"/>
+                                    <outlet property="delegate" destination="l75-fX-ZpF" id="oYj-ss-b6i"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BVz-EF-j13" firstAttribute="top" secondItem="kr4-08-Gll" secondAttribute="top" id="CJW-b3-bRm"/>
+                            <constraint firstItem="kr4-08-Gll" firstAttribute="trailing" secondItem="BVz-EF-j13" secondAttribute="trailing" id="qJY-EW-ugY"/>
+                            <constraint firstItem="kr4-08-Gll" firstAttribute="bottom" secondItem="BVz-EF-j13" secondAttribute="bottom" id="tje-0V-udT"/>
+                            <constraint firstItem="BVz-EF-j13" firstAttribute="leading" secondItem="kr4-08-Gll" secondAttribute="leading" id="tkc-5o-kYE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kr4-08-Gll"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Любими" image="search-heart" id="shO-by-J5X"/>
+                    <tabBarItem key="tabBarItem" title="Любимички" image="search-heart" id="shO-by-J5X"/>
+                    <connections>
+                        <outlet property="tableView" destination="BVz-EF-j13" id="J9h-Bc-GCj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVJ-Wj-sMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
