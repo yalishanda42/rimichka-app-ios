@@ -43,9 +43,9 @@ class RhymeMeViewController: UIViewController {
   }
   
   @IBAction func onTapRhymeButton(_ sender: UIButton) {
-    guard let rhyme = rhymeInput.text else { return }
+    guard let word = rhymeInput.text else { return }
     rhymeInput.resignFirstResponder()
-    fetchAndPopulateRhymes(for: rhyme)
+    fetchAndPopulateRhymes(for: word)
   }
   
   // MARK: - Helper methods
@@ -54,7 +54,7 @@ class RhymeMeViewController: UIViewController {
     return rhymes[indexPath.row]
   }
   
-  private func fetchAndPopulateRhymes(for word: String) {
+  func fetchAndPopulateRhymes(for word: String) {
     rhymeInput.text = word  // sync the text field input with the current word being rhymed
     rhymeMeButton.alpha = 0
     

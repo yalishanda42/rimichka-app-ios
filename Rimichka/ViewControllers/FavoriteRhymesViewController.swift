@@ -52,7 +52,14 @@ extension FavoriteRhymesViewController: UITableViewDataSource {
 
 extension FavoriteRhymesViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    // TODO: navigate to the other view controller
+    guard let rhymesVC = tabBarController?.viewControllers?[0] as? RhymeMeViewController else {
+        return
+    }
+    
+    let word = favoriteRhymes.list[indexPath.row].parentWord
+    rhymesVC.fetchAndPopulateRhymes(for: word)
+    
+    tabBarController?.selectedIndex = 0
   }
   
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
