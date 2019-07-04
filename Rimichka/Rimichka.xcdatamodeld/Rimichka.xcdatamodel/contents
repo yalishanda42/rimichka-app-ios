@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Rhyme" representedClassName="Rhyme" syncable="YES" codeGenerationType="class">
+    <entity name="RhymeEntity" representedClassName="RhymeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="parentWord" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Rhyme" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="RhymeEntity" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>
