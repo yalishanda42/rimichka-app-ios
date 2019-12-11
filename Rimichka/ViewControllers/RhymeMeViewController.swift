@@ -12,9 +12,10 @@ class RhymeMeViewController: UIViewController {
   
   // MARK: - Outlets
   
-  @IBOutlet weak var rhymeInput: UITextField!
-  @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var rhymeMeButton: UIButton!
+  @IBOutlet private weak var rhymeInput: UITextField!
+  @IBOutlet private weak var tableView: UITableView!
+  @IBOutlet private weak var rhymeMeButton: UIButton!
+  @IBOutlet private weak var searchBottomLine: UIView!
   
   // MARK: - Properties
   
@@ -24,6 +25,19 @@ class RhymeMeViewController: UIViewController {
   private lazy var favoriteRhymes = FavoriteRhymes.shared
 
   private var rhymes: [RhymePair] = []
+  private var lastSearchedWord: String?
+  
+  private var searchButtonIsHidden: Bool = true {
+    didSet {
+      rhymeMeButton.isHidden = searchButtonIsHidden
+    }
+  }
+  
+  private var bottomLineIsInFocusedState: Bool = false {
+    didSet {
+      searchBottomLine.backgroundColor = bottomLineIsInFocusedState ? UIColor(named: "Foreground") : UIColor(named: "BottomLineNotFocused")
+    }
+  }
 
   // MARK: - View Controller Lifecycle
   
@@ -32,14 +46,21 @@ class RhymeMeViewController: UIViewController {
     
     tableView.delegate = self
     tableView.dataSource = self
-    rhymeMeButton.alpha = 0
+    searchButtonIsHidden = true
     favoriteRhymes.addObserver(self)
   }
   
   //MARK: - Actions
   
-  @IBAction func rhymeChanged(_ sender: Any) {
-    rhymeMeButton.alpha = 1
+  @IBAction func rhymeChanged(_ sender: UITextField) {
+    if let searchWord = sender.text,
+      let lastWord = lastSearchedWord,
+      searchWord.lowercased() == lastWord.lowercased()
+    {
+      searchButtonIsHidden = true
+    } else if let searchWord = sender.text, searchWord != "", searchButtonIsHidden {
+      searchButtonIsHidden = false
+    }
   }
   
   @IBAction func onTapRhymeButton(_ sender: UIButton) {
@@ -56,7 +77,6 @@ class RhymeMeViewController: UIViewController {
   
   func fetchAndPopulateRhymes(for word: String) {
     rhymeInput.text = word  // sync the text field input with the current word being rhymed
-    rhymeMeButton.alpha = 0
     
     networking.getRhymesForWord(word: word) { [weak self] (result) in
       guard let self = self, let result = result else {
@@ -137,9 +157,24 @@ extension RhymeMeViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     if let word = textField.text {
+      searchButtonIsHidden = true
       fetchAndPopulateRhymes(for: word)
+      lastSearchedWord = word
     }
     return false
+  }
+  
+  func textFieldShouldClear(_ textField: UITextField) -> Bool {
+    searchButtonIsHidden = true
+    return true
+  }
+  
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    bottomLineIsInFocusedState = true
+  }
+  
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    bottomLineIsInFocusedState = false
   }
 }
 
