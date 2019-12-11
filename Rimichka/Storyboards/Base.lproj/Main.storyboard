@@ -95,6 +95,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="HRK-Kv-BgI"/>
                                                         <constraint firstAttribute="height" constant="30" id="hO2-6Y-zuj"/>
                                                     </constraints>
+                                                    <color key="tintColor" name="Foreground"/>
                                                     <state key="normal" image="like"/>
                                                     <connections>
                                                         <action selector="onTapFavoriteButton:" destination="2hf-Ic-vcd" eventType="touchUpInside" id="Tkw-hn-v5A"/>
@@ -176,6 +177,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="bQU-Vc-cMN"/>
                                                         <constraint firstAttribute="height" constant="30" id="nhG-2p-JBu"/>
                                                     </constraints>
+                                                    <color key="tintColor" name="Foreground"/>
                                                     <state key="normal" image="like"/>
                                                     <connections>
                                                         <action selector="onTapFavoriteButton:" destination="X88-q6-COt" eventType="touchUpInside" id="aPb-rw-Nyk"/>
