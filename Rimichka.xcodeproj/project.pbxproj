@@ -21,6 +21,7 @@
 		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
 		1A320FF522CCC534008C1CE8 /* FavoriteRhymes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */; };
 		1A320FFB22CCCE3C008C1CE8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */; };
+		1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9FA54E23A123B400A3E38C /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
 		1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymes.swift; sourceTree = "<group>"; };
 		1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		1A9FA54E23A123B400A3E38C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				1AF2702922CBA3AA005C7213 /* Storyboards */,
 				1AF2702C22CBA889005C7213 /* Utilities */,
 				11824AD2222DCE3A007DB98C /* Assets.xcassets */,
+				1A9FA54E23A123B400A3E38C /* Colors.xcassets */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
 				11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */,
 			);
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11824AD6222DCE3A007DB98C /* LaunchScreen.storyboard in Resources */,
+				1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */,
 				11824AD3222DCE3A007DB98C /* Assets.xcassets in Resources */,
 				11824ACE222DCE39007DB98C /* Main.storyboard in Resources */,
 			);
@@ -374,7 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
 				INFOPLIST_FILE = Rimichka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
 				INFOPLIST_FILE = Rimichka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
