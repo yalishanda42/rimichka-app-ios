@@ -66,6 +66,7 @@ class RhymeMeViewController: UIViewController {
   @IBAction func onTapRhymeButton(_ sender: UIButton) {
     guard let word = rhymeInput.text else { return }
     rhymeInput.resignFirstResponder()
+    searchButtonIsHidden = true
     fetchAndPopulateRhymes(for: word)
   }
   
