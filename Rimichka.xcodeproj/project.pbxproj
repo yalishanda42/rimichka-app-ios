@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeStringForURL.swift; sourceTree = "<group>"; };
-		11824AC5222DCE39007DB98C /* Rimichka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rimichka.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11824AC5222DCE39007DB98C /* Римичка.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Римичка.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11824AC8222DCE39007DB98C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeMeViewController.swift; sourceTree = "<group>"; };
 		11824ACD222DCE39007DB98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		11824AC6222DCE39007DB98C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11824AC5222DCE39007DB98C /* Rimichka.app */,
+				11824AC5222DCE39007DB98C /* Римичка.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			);
 			name = Rimichka;
 			productName = Rimichka;
-			productReference = 11824AC5222DCE39007DB98C /* Rimichka.app */;
+			productReference = 11824AC5222DCE39007DB98C /* Римичка.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -383,8 +383,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rimichka;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
+				PRODUCT_NAME = "Римичка";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,8 +402,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Rimichka;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
+				PRODUCT_NAME = "Римичка";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
