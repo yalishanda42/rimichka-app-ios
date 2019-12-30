@@ -16,13 +16,56 @@ class RhymeMeViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
   @IBOutlet private weak var rhymeMeButton: UIButton!
   @IBOutlet private weak var searchBottomLine: UIView!
+  @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+  @IBOutlet private weak var noContentLabel: UILabel!
   
   // MARK: - Properties
   
   let cellIdentifier = "WordCell"
   
+  private let loadingFailedText = "Или няма рима, или няма интернет :("
+  private let noResultsText = "Е това вече не мога да го римувам :/"
+  
   private lazy var networking = Networking.shared
   private lazy var favoriteRhymes = FavoriteRhymes.shared
+  
+  private var searchState: SearchState = .initial {
+    didSet {
+      if searchState == .loading {
+        loadingIndicator.startAnimating()
+      } else {
+        loadingIndicator.stopAnimating()
+      }
+      
+      switch searchState {
+      case .initial:
+        noContentLabel.isHidden = true
+        loadingIndicator.isHidden = true
+        tableView.isHidden = true
+      case .loading:
+        noContentLabel.isHidden = true
+        loadingIndicator.isHidden = false
+        tableView.isHidden = true
+      case .hasResults:
+        noContentLabel.isHidden = true
+        loadingIndicator.isHidden = true
+        tableView.isHidden = false
+      case .noResults, .loadingFailed:
+        noContentLabel.isHidden = false
+        loadingIndicator.isHidden = true
+        tableView.isHidden = true
+      }
+      
+      switch searchState {
+      case .noResults:
+        noContentLabel.text = noResultsText
+      case .loadingFailed:
+        noContentLabel.text = loadingFailedText
+      default:
+        noContentLabel.text = nil
+      }
+    }
+  }
 
   private var rhymes: [RhymePair] = []
   private var lastSearchedWord: String?
@@ -47,6 +90,7 @@ class RhymeMeViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     searchButtonIsHidden = true
+    searchState = .initial
     favoriteRhymes.addObserver(self)
   }
   
@@ -79,9 +123,13 @@ class RhymeMeViewController: UIViewController {
   func fetchAndPopulateRhymes(for word: String) {
     rhymeInput.text = word  // sync the text field input with the current word being rhymed
     
+    searchState = .loading
+    
     networking.getRhymesForWord(word: word) { [weak self] (result) in
-      guard let self = self, let result = result else {
-        // TODO: handle error
+      guard let self = self else { return }
+      
+      guard let result = result else {
+        self.searchState = .loadingFailed
         return
       }
       
@@ -90,11 +138,23 @@ class RhymeMeViewController: UIViewController {
         for i in 0..<self.rhymes.count {
           self.rhymes[i].parentWord = word
         }
-        // TODO: Get sorting options from user preferences?
         self.rhymes = self.rhymes.sorted { $0.strength > $1.strength }
+        
         self.tableView.reloadData()
+        
+        self.searchState = result.count == 0 ? .noResults : .hasResults
       }
     }
+  }
+}
+
+extension RhymeMeViewController {
+  enum SearchState {
+    case initial
+    case loading
+    case loadingFailed
+    case hasResults
+    case noResults
   }
 }
 
