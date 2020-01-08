@@ -78,7 +78,7 @@ class RhymeMeViewController: UIViewController {
   
   private var bottomLineIsInFocusedState: Bool = false {
     didSet {
-      searchBottomLine.backgroundColor = bottomLineIsInFocusedState ? UIColor(named: "Foreground") : UIColor(named: "BottomLineNotFocused")
+        searchBottomLine.backgroundColor = bottomLineIsInFocusedState ? UIColor(red: 1.0, green: 54.0 / 255.0, blue: 67.0 / 255.0, alpha: 1) : UIColor(red: 60.0 / 255.0, green: 60.0 / 255.0 , blue: 67.0 / 255.0, alpha: 0.3)
     }
   }
 

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ka-cb-NAF">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ka-cb-NAF">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,9 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" name="Foreground"/>
-                        <color key="barTintColor" name="Background"/>
-                        <color key="selectedImageTintColor" name="Foreground"/>
+                        <color key="tintColor" red="1" green="0.21176470588235294" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="M2v-Wa-nsr"/>
@@ -39,10 +40,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-Hz-w6c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="67"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Въведи дума на кирилица..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-2m-f8k">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="40.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                         <connections>
@@ -51,48 +52,48 @@
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldI-Ys-o3E" userLabel="Input Bottom Line">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="2"/>
-                                        <color key="backgroundColor" name="BottomLineNotFocused"/>
+                                        <rect key="frame" x="0.0" y="31" width="320" height="2"/>
+                                        <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="sZ2-s1-wtr"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuA-Ci-4Aa">
-                                        <rect key="frame" x="114.5" y="50.5" width="91" height="30"/>
+                                        <rect key="frame" x="114.5" y="37" width="91" height="30"/>
                                         <state key="normal" title="Римувай ме!">
-                                            <color key="titleColor" name="Foreground"/>
+                                            <color key="titleColor" red="1" green="0.21176470588235294" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onTapRhymeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sc6-Lu-PZf"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Background"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80.5" id="4Ig-NU-GXV"/>
                                     <constraint firstItem="ldI-Ys-o3E" firstAttribute="width" secondItem="rbd-2m-f8k" secondAttribute="width" id="hHs-oe-9R4"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PAI-Do-DjX">
-                                <rect key="frame" x="0.0" y="88.5" width="320" height="430.5"/>
+                                <rect key="frame" x="0.0" y="95" width="320" height="424"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Или няма рима, или няма интернет :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYZ-ak-TDT">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="Foreground"/>
+                                        <color key="textColor" red="1" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="dd0-0s-X3d">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="dd0-0s-X3d">
                                         <rect key="frame" x="0.0" y="20.5" width="320" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="color" name="Foreground"/>
+                                        <color key="color" red="1" green="0.21176470589999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iS8-z2-0bG">
-                                        <rect key="frame" x="0.0" y="57.5" width="320" height="373"/>
+                                        <rect key="frame" x="0.0" y="57.5" width="320" height="366.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" id="2hf-Ic-vcd" customClass="WordCell" customModule="Римичка" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hf-Ic-vcd" id="JWL-lb-Edd">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -110,7 +111,7 @@
                                                                 <constraint firstAttribute="width" constant="30" id="HRK-Kv-BgI"/>
                                                                 <constraint firstAttribute="height" constant="30" id="hO2-6Y-zuj"/>
                                                             </constraints>
-                                                            <color key="tintColor" name="Foreground"/>
+                                                            <color key="tintColor" red="1" green="0.21176470588235294" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="like"/>
                                                             <connections>
                                                                 <action selector="onTapFavoriteButton:" destination="2hf-Ic-vcd" eventType="touchUpInside" id="Tkw-hn-v5A"/>
@@ -135,7 +136,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="Background"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PAI-Do-DjX" firstAttribute="top" secondItem="4tg-Hz-w6c" secondAttribute="bottom" constant="8" symbolic="YES" id="2Kv-RS-Rwe"/>
@@ -175,11 +176,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BVz-EF-j13">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Favorite Rhymes Cell" id="X88-q6-COt" customClass="WordCell" customModule="Римичка" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X88-q6-COt" id="o5E-yL-dDG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -197,7 +198,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="bQU-Vc-cMN"/>
                                                         <constraint firstAttribute="height" constant="30" id="nhG-2p-JBu"/>
                                                     </constraints>
-                                                    <color key="tintColor" name="Foreground"/>
+                                                    <color key="tintColor" red="1" green="0.21176470588235294" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="like"/>
                                                     <connections>
                                                         <action selector="onTapFavoriteButton:" destination="X88-q6-COt" eventType="touchUpInside" id="aPb-rw-Nyk"/>
@@ -243,17 +244,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="like" width="50" height="50"/>
-        <image name="search-heart" width="30" height="30"/>
-        <image name="search-more-glyph" width="30" height="30"/>
-        <namedColor name="Background">
-            <color red="0.99607843137254903" green="0.95686274509803926" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BottomLineNotFocused">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Foreground">
-            <color red="1" green="0.21176470588235294" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="like" width="37.5" height="37.5"/>
+        <image name="search-heart" width="22.5" height="22.5"/>
+        <image name="search-more-glyph" width="22.5" height="22.5"/>
     </resources>
 </document>
