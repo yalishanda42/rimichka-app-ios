@@ -28,7 +28,6 @@ struct RhymesListView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        RhymesListView(viewModel: RhymesListViewModel())
         RhymesListView(viewModel: testViewModel)
     }
 }

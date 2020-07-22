@@ -20,6 +20,7 @@
 		74C915B824C8D336008921FC /* SearchRhymesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B724C8D336008921FC /* SearchRhymesViewModel.swift */; };
 		74C915BA24C8D9A6008921FC /* FavoriteRhymesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B924C8D9A6008921FC /* FavoriteRhymesViewModel.swift */; };
 		74C915BC24C8DABA008921FC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BB24C8DABA008921FC /* RootViewModel.swift */; };
+		74C915BE24C8ED35008921FC /* RimichkaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BD24C8ED35008921FC /* RimichkaService.swift */; };
 		74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335124C8C22800C8C826 /* RimichkaApp.swift */; };
 		74EE335424C8C2A600C8C826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335324C8C2A600C8C826 /* RootView.swift */; };
 		74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335524C8C35100C8C826 /* SearchRhymesView.swift */; };
@@ -44,6 +45,7 @@
 		74C915B724C8D336008921FC /* SearchRhymesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRhymesViewModel.swift; sourceTree = "<group>"; };
 		74C915B924C8D9A6008921FC /* FavoriteRhymesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesViewModel.swift; sourceTree = "<group>"; };
 		74C915BB24C8DABA008921FC /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		74C915BD24C8ED35008921FC /* RimichkaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaService.swift; sourceTree = "<group>"; };
 		74EE335124C8C22800C8C826 /* RimichkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaApp.swift; sourceTree = "<group>"; };
 		74EE335324C8C2A600C8C826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		74EE335524C8C35100C8C826 /* SearchRhymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRhymesView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				11824AEB222DE135007DB98C /* Views */,
 				74C915AE24C8CB35008921FC /* ViewModels */,
 				11824AE0222DD15D007DB98C /* Models */,
+				74C915BF24C8F700008921FC /* Services */,
 				1AF2702C22CBA889005C7213 /* Utilities */,
 				74EE335E24C8C5A600C8C826 /* Supporting Files */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
@@ -135,6 +138,14 @@
 				74C915AF24C8CB54008921FC /* RhymesListViewRowViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		74C915BF24C8F700008921FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				74C915BD24C8ED35008921FC /* RimichkaService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		74EE335E24C8C5A600C8C826 /* Supporting Files */ = {
@@ -230,6 +241,7 @@
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
 				74C915B424C8CFB5008921FC /* RhymesListViewModel.swift in Sources */,
 				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
+				74C915BE24C8ED35008921FC /* RimichkaService.swift in Sources */,
 				74C915BA24C8D9A6008921FC /* FavoriteRhymesViewModel.swift in Sources */,
 				74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */,
 				1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */,
