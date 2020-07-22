@@ -14,7 +14,7 @@ class SearchRhymesViewModel: ObservableObject {
         didSet {
             if case .loaded(rhymesResult: let rhymes) = state {
                 rhymesListViewModel.rhymeViewModels = rhymes.map {
-                    RhymesListViewRowViewModel(text: $0.wrd, isMarked: false)
+                    RhymesListViewRowViewModel.init(with: .fetchedRhyme($0))
                 }
             } else {
                 rhymesListViewModel.rhymeViewModels = []

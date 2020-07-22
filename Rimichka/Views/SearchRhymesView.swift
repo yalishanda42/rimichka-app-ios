@@ -54,10 +54,6 @@ struct SearchRymesView_Previews: PreviewProvider {
         return result
     }
     
-    var testData: [FetchedRhyme] {
-        
-    }
-    
     static var previews: some View {
         SearchRhymesView(viewModel: testViewModel(withState: .initial))
         SearchRhymesView(viewModel: testViewModel(withState: .loading))

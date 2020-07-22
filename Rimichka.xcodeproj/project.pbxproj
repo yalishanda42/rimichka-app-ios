@@ -22,7 +22,7 @@
 		74C915BC24C8DABA008921FC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BB24C8DABA008921FC /* RootViewModel.swift */; };
 		74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335124C8C22800C8C826 /* RimichkaApp.swift */; };
 		74EE335424C8C2A600C8C826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335324C8C2A600C8C826 /* RootView.swift */; };
-		74EE335624C8C35100C8C826 /* SearchRymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335524C8C35100C8C826 /* SearchRymesView.swift */; };
+		74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335524C8C35100C8C826 /* SearchRhymesView.swift */; };
 		74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */; };
 		74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335A24C8C43200C8C826 /* Image+Asset.swift */; };
 		74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335C24C8C4F800C8C826 /* Color+Asset.swift */; };
@@ -46,7 +46,7 @@
 		74C915BB24C8DABA008921FC /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		74EE335124C8C22800C8C826 /* RimichkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaApp.swift; sourceTree = "<group>"; };
 		74EE335324C8C2A600C8C826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		74EE335524C8C35100C8C826 /* SearchRymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRymesView.swift; sourceTree = "<group>"; };
+		74EE335524C8C35100C8C826 /* SearchRhymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRhymesView.swift; sourceTree = "<group>"; };
 		74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesView.swift; sourceTree = "<group>"; };
 		74EE335A24C8C43200C8C826 /* Image+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Asset.swift"; sourceTree = "<group>"; };
 		74EE335C24C8C4F800C8C826 /* Color+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				74EE335324C8C2A600C8C826 /* RootView.swift */,
-				74EE335524C8C35100C8C826 /* SearchRymesView.swift */,
+				74EE335524C8C35100C8C826 /* SearchRhymesView.swift */,
 				74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */,
 				74C915AA24C8CA43008921FC /* RhymesListView.swift */,
 				74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */,
@@ -221,7 +221,7 @@
 				74C915B024C8CB54008921FC /* RhymesListViewRowViewModel.swift in Sources */,
 				74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */,
 				11262BFC22318F1B00B9E29A /* String+URLescaped.swift in Sources */,
-				74EE335624C8C35100C8C826 /* SearchRymesView.swift in Sources */,
+				74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */,
 				74C915B824C8D336008921FC /* SearchRhymesViewModel.swift in Sources */,
 				74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */,
 				74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */,

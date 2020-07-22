@@ -29,17 +29,12 @@ struct FavoriteRhymesView_Previews: PreviewProvider {
     
     static var testViewModel: FavoriteRhymesViewModel {
         let result = FavoriteRhymesViewModel()
-        result.rhymesViewModels = [
-            .init(text: "Test -> Test 1", isMarked: true),
-            .init(text: "Test -> Test 2", isMarked: true),
-            .init(text: "Test -> Test 3", isMarked: true),
-            .init(text: "Test -> Test 4", isMarked: true),
-            .init(text: "Test -> Test 5", isMarked: true),
-        ]
+        result.rhymesViewModels = Array(repeating: .init(with: .rhymePair(RhymePair(word: "Word", strength: 0, parentWord: "Parent"))), count: 20)
         return result
     }
     
     static var previews: some View {
+        FavoriteRhymesView(viewModel: FavoriteRhymesViewModel())
         FavoriteRhymesView(viewModel: testViewModel)
     }
 }

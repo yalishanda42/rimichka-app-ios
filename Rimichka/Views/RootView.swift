@@ -14,7 +14,7 @@ struct RootView: View {
     
     var body: some View {
         TabView {
-            SearchRymesView(viewModel: viewModel.searchViewModel).tabItem {
+            SearchRhymesView(viewModel: viewModel.searchViewModel).tabItem {
                 Image.Asset.searchMore
                 Text("Римички")
             }
@@ -24,31 +24,5 @@ struct RootView: View {
             }
         }.accentColor(Color.Asset.foreground)
         .background(Color.Asset.background)
-    }
-}
-
-struct RootView_Previews: PreviewProvider {
-    
-    static var testViewModel: RootViewModel {
-        let result = RootViewModel()
-        result.searchViewModel.rhymesListViewModel.rhymeViewModels = [
-            .init(text: "Test 1", isMarked: false),
-            .init(text: "Test 2", isMarked: true),
-            .init(text: "Test 3", isMarked: true),
-            .init(text: "Test 4", isMarked: false),
-            .init(text: "Test 5", isMarked: true),
-        ]
-        result.favoritesViewModel.rhymesViewModels = [
-            .init(text: "Test -> Test 1", isMarked: true),
-            .init(text: "Test -> Test 2", isMarked: true),
-            .init(text: "Test -> Test 3", isMarked: true),
-            .init(text: "Test -> Test 4", isMarked: true),
-            .init(text: "Test -> Test 5", isMarked: true),
-        ]
-        return result
-    }
-    
-    static var previews: some View {
-        RootView(viewModel: testViewModel)
     }
 }

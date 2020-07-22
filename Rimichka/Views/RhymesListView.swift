@@ -23,17 +23,12 @@ struct RhymesListView_Previews: PreviewProvider {
     
     static var testViewModel: RhymesListViewModel {
         let result = RhymesListViewModel()
-        result.rhymeViewModels = [
-            .init(text: "Test 1", isMarked: false),
-            .init(text: "Test 2", isMarked: true),
-            .init(text: "Test 3", isMarked: true),
-            .init(text: "Test 4", isMarked: false),
-            .init(text: "Test 5", isMarked: true),
-        ]
+        result.rhymeViewModels = Array(repeating: .init(with: .fetchedRhyme(FetchedRhyme(wrd: "Test", pri: 0))), count: 20)
         return result
     }
     
     static var previews: some View {
+        RhymesListView(viewModel: RhymesListViewModel())
         RhymesListView(viewModel: testViewModel)
     }
 }

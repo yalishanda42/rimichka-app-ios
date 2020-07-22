@@ -25,9 +25,3 @@ struct RhymesListViewRow: View {
         .padding(.horizontal, 10)
     }
 }
-
-struct RhymesListViewRow_Previews: PreviewProvider {
-    static var previews: some View {
-        RhymesListViewRow(viewModel: RhymesListViewRowViewModel(text: "Test", isMarked: false))
-    }
-}
