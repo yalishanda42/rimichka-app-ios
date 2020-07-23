@@ -23,6 +23,5 @@ struct RootView: View {
                 Text("Любимички")
             }
         }.accentColor(Color.Asset.foreground)
-        .background(Color.Asset.background)
     }
 }

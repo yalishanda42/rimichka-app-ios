@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchRhymesView: View {
     
     @StateObject var viewModel: SearchRhymesViewModel
+    @State var isEditing = false
     
     var stateDependentView: some View {
         switch viewModel.state {
@@ -29,12 +30,42 @@ struct SearchRhymesView: View {
         VStack {
             HStack {
                 TextField("Напиши дума...", text: $viewModel.searchQuery)
+                    .padding(7)
+                    .padding(.horizontal, 25)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                     
+                            if isEditing && !viewModel.searchQuery.isEmpty {
+                                Button(action: {
+                                    viewModel.searchQuery = ""
+                                }) {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 8)
+                                }
+                            }
+                        }
+                    ).padding(.horizontal, 10)
+                    .onTapGesture {
+                        isEditing = true
+                    }
+                
                 Button(action: {
+                    isEditing = false
                     UIApplication.shared.endEditing()
                     viewModel.searchRequested.send()
                 }, label: {
-                    Text("Римувай ме")
+                    Text("Римувай")
                 })
+                .padding(.trailing, 10)
+                .transition(.move(edge: .trailing))
+                .animation(.default)
             }.padding()
             
             Spacer()
