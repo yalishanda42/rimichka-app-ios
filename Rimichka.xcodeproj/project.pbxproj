@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E022CE64C100C2E61F /* RhymePair.swift */; };
 		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
 		1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9FA54E23A123B400A3E38C /* Colors.xcassets */; };
+		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
+		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
 		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
 		74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AA24C8CA43008921FC /* RhymesListView.swift */; };
 		74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */; };
@@ -38,6 +40,7 @@
 		1A1F43E022CE64C100C2E61F /* RhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymePair.swift; sourceTree = "<group>"; };
 		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
 		1A9FA54E23A123B400A3E38C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
 		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
 		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
 		74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewRow.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 			children = (
 				1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */,
 				1A1F43E022CE64C100C2E61F /* RhymePair.swift */,
+				7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +181,9 @@
 			dependencies = (
 			);
 			name = Rimichka;
+			packageProductDependencies = (
+				7443CC3524C9FCD2008830C7 /* RealmSwift */,
+			);
 			productName = Rimichka;
 			productReference = 11824AC5222DCE39007DB98C /* Rimichka.app */;
 			productType = "com.apple.product-type.application";
@@ -205,6 +213,9 @@
 				Base,
 			);
 			mainGroup = 11824ABC222DCE39007DB98C;
+			packageReferences = (
+				7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 11824AC6222DCE39007DB98C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +255,7 @@
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
 				74C915B424C8CFB5008921FC /* RhymesListViewModel.swift in Sources */,
 				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
+				7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */,
 				74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */,
 				74C915BA24C8D9A6008921FC /* FavoriteRhymesViewModel.swift in Sources */,
 				74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */,
@@ -438,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7443CC3524C9FCD2008830C7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11824ABD222DCE39007DB98C /* Project object */;
 }

@@ -7,9 +7,12 @@
 //
 
 import SwiftUI
+import OSLog
 
 @main
 struct RimichkaApp: App {
+    
+    static let logger = OSLog(subsystem: "bg.yalishanda.Rimichka", category: .pointsOfInterest)
     
     private static let apiService = RimichkaAPIService()
     private static let favoritesService = FavoriteRhymesService()
