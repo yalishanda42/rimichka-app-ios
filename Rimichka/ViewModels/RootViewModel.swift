@@ -10,14 +10,20 @@ import Combine
 import Foundation
 
 class RootViewModel: ObservableObject {
-    let searchViewModel = SearchRhymesViewModel()
-    let favoritesViewModel = FavoriteRhymesViewModel()
+    let searchViewModel: SearchRhymesViewModel
+    let favoritesViewModel: FavoriteRhymesViewModel
     
-    private let service: RimichkaService
+    private let apiService: RimichkaAPIService
+    private let favoritesService: FavoriteRhymesService
+    
     private var disposeBag: Set<AnyCancellable> = []
     
-    init(service: RimichkaService) {
-        self.service = service
+    init(apiService: RimichkaAPIService, favoritesService: FavoriteRhymesService) {
+        self.apiService = apiService
+        self.favoritesService = favoritesService
+        self.searchViewModel = SearchRhymesViewModel(favoritesService: favoritesService)
+        self.favoritesViewModel = FavoriteRhymesViewModel(favoritesService: favoritesService)
+        
         declareSubscriptions()
     }
 }
@@ -25,22 +31,22 @@ class RootViewModel: ObservableObject {
 private extension RootViewModel {
     func declareSubscriptions() {
         searchViewModel.searchRequested
-            .flatMap { [unowned self] _ -> AnyPublisher<[FetchedRhyme], Never> in
+            .flatMap { [unowned self] _ -> AnyPublisher<(String, [FetchedRhyme]), Never> in
                 let query = self.searchViewModel.searchQuery
                 self.searchViewModel.state = .loading
-                return service.rhymesForWord(query)
+                return apiService.rhymesForWord(query)
                     .receive(on: DispatchQueue.main)
                     .catch { apiError -> Empty<[FetchedRhyme], Never> in
                         self.searchViewModel.state = .failed(errorMessage: apiError.message)
                         return Empty(completeImmediately: true)
-                    }.eraseToAnyPublisher()
-            }.sink { [unowned self] result in
-                self.searchViewModel.state = .loaded(rhymesResult: result)
+                    }.map { (query, $0) }.eraseToAnyPublisher()
+            }.sink { [unowned self] query, result in
+                self.searchViewModel.state = .loaded(rhymesResult: result, searchQuery: query)
             }.store(in: &disposeBag)
     }
 }
 
-extension RimichkaService.APIError {
+extension RimichkaAPIService.APIError {
     var message: String {
         switch self {
         case .domainChanged:

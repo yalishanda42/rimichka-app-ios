@@ -9,32 +9,41 @@
 import Combine
 
 class RhymesListViewRowViewModel: ObservableObject {
-    @Published var isMarked: Bool
-    
-    var text: String {
-        switch model {
-        case .fetchedRhyme(let rhyme):
-            return rhyme.wrd
-        case .rhymePair(let pair):
-            return "\(pair.parentWord) -> \(pair.word)"
+    @Published var isMarked: Bool {
+        didSet {
+            if isMarked {
+                favoritesService.add(model)
+            } else {
+                favoritesService.remove(model)
+            }
         }
     }
     
-    var modelMarkStateChange: AnyPublisher<(ModelType, Bool), Never> {
-        $isMarked.map { (self.model, $0) }.eraseToAnyPublisher()
+    var text: String {
+        return "\(model.parentWord) -> \(model.word)"
     }
     
-    let model: ModelType
+    private let model: RhymePair
+    private let favoritesService: FavoriteRhymesService
     
-    init(with model: ModelType, isMarked: Bool = false) {
-        self.model = model
-        self.isMarked = isMarked
+    private var disposeBag: Set<AnyCancellable> = []
+    
+    init(with model: ModelType, favoritesService: FavoriteRhymesService) {
+        switch model {
+        case .fetchedRhyme(let original, let rhyme):
+            self.model = rhyme.asRhymePair(originalWord: original)
+        case .rhymePair(let pair):
+            self.model = pair
+        }
+        
+        self.favoritesService = favoritesService
+        self.isMarked = favoritesService.contains(self.model)
     }
 }
 
 extension RhymesListViewRowViewModel {
     enum ModelType {
-        case fetchedRhyme(FetchedRhyme)
+        case fetchedRhyme(String, FetchedRhyme)
         case rhymePair(RhymePair)
     }
 }
@@ -42,5 +51,19 @@ extension RhymesListViewRowViewModel {
 extension RhymesListViewRowViewModel: Identifiable {
     var id: String {
         text
+    }
+}
+
+extension FetchedRhyme {
+    func asRhymePair(originalWord: String) -> RhymePair {
+        .init(word: wrd, strength: pri, parentWord: originalWord)
+    }
+}
+
+private extension RhymesListViewRowViewModel {
+    func declareSubscriptions() {
+        favoritesService.favoriteRhymes.sink { [unowned self] models in
+            isMarked = models.contains(model)
+        }.store(in: &disposeBag)
     }
 }

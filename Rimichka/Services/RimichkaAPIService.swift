@@ -1,5 +1,5 @@
 //
-//  RimichkaService.swift
+//  RimichkaAPIService.swift
 //  Rimichka
 //
 //  Created by Alexander Ignatov on 23.07.20.
@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 
-class RimichkaService {
+class RimichkaAPIService {
     
     private lazy var decoder = JSONDecoder()
     
@@ -26,7 +26,7 @@ class RimichkaService {
     }
 }
 
-extension RimichkaService {
+extension RimichkaAPIService {
     enum APIError: Error {
         case unknown
         case domainChanged
@@ -35,7 +35,7 @@ extension RimichkaService {
     }
 }
 
-private extension RimichkaService {
+private extension RimichkaAPIService {
     func url(forWord word: String) -> URL? {
         return URL(string: "https://rimichka.com/?json=1&word=\(word.URLescaped)")
     }

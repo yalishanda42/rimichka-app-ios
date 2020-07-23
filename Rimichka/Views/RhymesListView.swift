@@ -23,7 +23,7 @@ struct RhymesListView_Previews: PreviewProvider {
     
     static var testViewModel: RhymesListViewModel {
         let result = RhymesListViewModel()
-        result.rhymeViewModels = Array(repeating: .init(with: .fetchedRhyme(FetchedRhyme(wrd: "Test", pri: 0))), count: 20)
+        result.rhymeViewModels = Array(repeating: .init(with: .rhymePair(.init(word: "Test", strength: 10, parentWord: "Example")), favoritesService: FavoriteRhymesService()), count: 20)
         return result
     }
     

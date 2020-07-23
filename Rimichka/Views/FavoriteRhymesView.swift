@@ -12,29 +12,23 @@ struct FavoriteRhymesView: View {
     
     @StateObject var viewModel: FavoriteRhymesViewModel
     
-    var listViewModel: RhymesListViewModel {
-        let result = RhymesListViewModel()
-        result.rhymeViewModels = viewModel.rhymesViewModels
-        return result
-    }
-    
     var body: some View {
-        viewModel.rhymesViewModels.isEmpty
+        viewModel.rhymeViewModels.isEmpty
             ? AnyView(Text("Все още няма любими римички.").foregroundColor(Color.Asset.foreground))
-            : AnyView(RhymesListView(viewModel: listViewModel))
+            : AnyView(RhymesListView(viewModel: viewModel.listViewModel))
     }
 }
 
 struct FavoriteRhymesView_Previews: PreviewProvider {
     
     static var testViewModel: FavoriteRhymesViewModel {
-        let result = FavoriteRhymesViewModel()
-        result.rhymesViewModels = Array(repeating: .init(with: .rhymePair(RhymePair(word: "Word", strength: 0, parentWord: "Parent"))), count: 20)
+        let result = FavoriteRhymesViewModel(favoritesService: FavoriteRhymesService())
+        result.rhymeViewModels = Array(repeating: .init(with: .rhymePair(RhymePair(word: "Word", strength: 0, parentWord: "Parent")), favoritesService: FavoriteRhymesService()), count: 20)
         return result
     }
     
     static var previews: some View {
-        FavoriteRhymesView(viewModel: FavoriteRhymesViewModel())
+        FavoriteRhymesView(viewModel: FavoriteRhymesViewModel(favoritesService: FavoriteRhymesService()))
         FavoriteRhymesView(viewModel: testViewModel)
     }
 }

@@ -80,7 +80,7 @@ struct SearchRhymesView: View {
 struct SearchRymesView_Previews: PreviewProvider {
     
     static func testViewModel(withState state: SearchRhymesViewModel.SearchState) -> SearchRhymesViewModel {
-        let result = SearchRhymesViewModel()
+        let result = SearchRhymesViewModel(favoritesService: FavoriteRhymesService())
         result.state = state
         return result
     }
@@ -88,7 +88,7 @@ struct SearchRymesView_Previews: PreviewProvider {
     static var previews: some View {
         SearchRhymesView(viewModel: testViewModel(withState: .initial))
         SearchRhymesView(viewModel: testViewModel(withState: .loading))
-        SearchRhymesView(viewModel: testViewModel(withState: .loaded(rhymesResult: Array(repeating: .init(wrd: "Test", pri: 0), count: 20))))
+        SearchRhymesView(viewModel: testViewModel(withState: .loaded(rhymesResult: Array(repeating: .init(wrd: "Test", pri: 0), count: 20), searchQuery: "")))
         SearchRhymesView(viewModel: testViewModel(withState: .failed(errorMessage: "Error")))
 
     }

@@ -10,9 +10,18 @@ import SwiftUI
 
 @main
 struct RimichkaApp: App {
+    
+    private static let apiService = RimichkaAPIService()
+    private static let favoritesService = FavoriteRhymesService()
+    
+    private static let rootViewModel = RootViewModel(
+        apiService: apiService,
+        favoritesService: favoritesService
+    )
+    
     var body: some Scene {
         WindowGroup {
-            RootView(viewModel: RootViewModel(service: RimichkaService()))
+            RootView(viewModel: RimichkaApp.rootViewModel)
         }
     }
 }
