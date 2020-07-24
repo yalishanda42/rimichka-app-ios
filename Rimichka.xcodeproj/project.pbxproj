@@ -17,6 +17,7 @@
 		74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3924CB7BA700E1C96E /* AppAction.swift */; };
 		74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3B24CB7CCC00E1C96E /* Store.swift */; };
 		74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4024CB8D9E00E1C96E /* Set+asArray.swift */; };
+		74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74016C4224CB9FF000E1C96E /* Launch.storyboard */; };
 		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
 		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
 		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
@@ -45,6 +46,7 @@
 		74016C3924CB7BA700E1C96E /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		74016C3B24CB7CCC00E1C96E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		74016C4024CB8D9E00E1C96E /* Set+asArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+asArray.swift"; sourceTree = "<group>"; };
+		74016C4224CB9FF000E1C96E /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
 		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
 		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				11824AD2222DCE3A007DB98C /* Assets.xcassets */,
 				1A9FA54E23A123B400A3E38C /* Colors.xcassets */,
+				74016C4224CB9FF000E1C96E /* Launch.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */,
 				11824AD3222DCE3A007DB98C /* Assets.xcassets in Resources */,
+				74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
 				ENABLE_PREVIEWS = YES;
@@ -403,6 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
 				PRODUCT_NAME = Rimichka;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
 				ENABLE_PREVIEWS = YES;
@@ -423,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
 				PRODUCT_NAME = Rimichka;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
