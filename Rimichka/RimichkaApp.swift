@@ -30,7 +30,7 @@ struct RimichkaApp: App {
         store.send(.loadPersistedFavorites)
     }
     
-    static func reduce(
+    private static func reduce(
         state: inout AppState,
         action: AppAction,
         environment: AppEnvironment
