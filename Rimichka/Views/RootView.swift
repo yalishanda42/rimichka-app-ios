@@ -14,9 +14,7 @@ struct RootView: View {
     
     var body: some View {
         TabView {
-            SearchRhymesView(searchState: store.state.searchState) { query in
-                store.send(.search(query))
-            }.tabItem {
+            SearchRhymesView(searchState: store.state.searchState).tabItem {
                 Image.Asset.searchMore
                 Text("Римички")
             }

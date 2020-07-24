@@ -10,8 +10,9 @@ import SwiftUI
 
 struct SearchRhymesView: View {
     
+    @EnvironmentObject var store: AppStore
+    
     let searchState: AppState.SearchState
-    let onTapSearch: (String) -> Void
     
     @State private var searchQuery = ""
     @State private var isEditing = false
@@ -20,6 +21,7 @@ struct SearchRhymesView: View {
         VStack {
             HStack {
                 TextField("Напиши дума...", text: $searchQuery)
+                    .autocapitalization(.none)
                     .padding(7)
                     .padding(.horizontal, 25)
                     .background(Color(.systemGray6))
@@ -49,7 +51,7 @@ struct SearchRhymesView: View {
                 Button(action: {
                     isEditing = false
                     UIApplication.shared.endEditing()
-                    onTapSearch(searchQuery)
+                    store.send(.search(searchQuery))
                 }, label: {
                     Text("Римувай")
                 })
@@ -82,9 +84,9 @@ struct SearchRhymesView: View {
 
 struct SearchRymesView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchRhymesView(searchState: .initial, onTapSearch: {_ in })
-        SearchRhymesView(searchState: .loading, onTapSearch: {_ in })
-        SearchRhymesView(searchState: .loaded(serchResults: Array(repeating: .init(word: "Test", strength: 0, parentWord: "Example"), count: 20)), onTapSearch: {_ in })
-        SearchRhymesView(searchState: .failed(errorMessage: "Error"), onTapSearch: {_ in })
+        SearchRhymesView(searchState: .initial)
+        SearchRhymesView(searchState: .loading)
+        SearchRhymesView(searchState: .loaded(serchResults: Array(repeating: .init(word: "Test", strength: 0, parentWord: "Example"), count: 20)))
+        SearchRhymesView(searchState: .failed(errorMessage: "Error"))
     }
 }
