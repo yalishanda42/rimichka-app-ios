@@ -7,24 +7,67 @@
 //
 
 import SwiftUI
-import OSLog
+import Combine
+
+typealias AppStore = Store<AppState, AppAction, AppEnvironment>
 
 @main
 struct RimichkaApp: App {
     
-    static let logger = OSLog(subsystem: "bg.yalishanda.Rimichka", category: .pointsOfInterest)
-    
-    private static let apiService = RimichkaAPIService()
-    private static let favoritesService = FavoriteRhymesService()
-    
-    private static let rootViewModel = RootViewModel(
-        apiService: apiService,
-        favoritesService: favoritesService
+    private let store = AppStore(
+        initialState: .init(),
+        reducer: RimichkaApp.reduce,
+        environment: .init()
     )
     
     var body: some Scene {
         WindowGroup {
-            RootView(viewModel: RimichkaApp.rootViewModel)
+            RootView().environmentObject(store)
         }
+    }
+    
+    init() {
+        store.send(.loadPersistedFavorites)
+    }
+    
+    static func reduce(
+        state: inout AppState,
+        action: AppAction,
+        environment: AppEnvironment
+    ) -> AnyPublisher<AppAction, Never> {
+        switch action {
+        
+        case .search(let query):
+            state.searchState = .loading
+            return environment.apiService
+                .rhymesForWord(query)
+                .map { list in
+                    list.map { fetched in
+                        fetched.asRhymePair(originalWord: query)
+                    }
+                }.map { .setSearchResults($0) }
+                .catch({ error -> Just<AppAction> in
+                    return Just(.failSearch(errorMessage: error.message))
+                }).eraseToAnyPublisher()
+            
+        case .failSearch(errorMessage: let message):
+            state.searchState = .failed(errorMessage: message)
+            
+        case .setSearchResults(let results):
+            state.searchState = .loaded(serchResults: results)
+            
+        case .loadPersistedFavorites:
+            state.favoriteRhymes = environment.dbService.fetchAllSaved()
+            
+        case .markRhyme(let pair):
+            state.favoriteRhymes.insert(pair)
+            environment.dbService.add(pair)
+            
+        case .unmarkRhyme(let pair):
+            state.favoriteRhymes.remove(pair)
+            environment.dbService.remove(pair)
+        }
+        
+        return Empty().eraseToAnyPublisher()
     }
 }

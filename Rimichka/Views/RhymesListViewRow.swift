@@ -10,18 +10,26 @@ import SwiftUI
 
 struct RhymesListViewRow: View {
     
-    @StateObject var viewModel: RhymesListViewRowViewModel
-
+    @EnvironmentObject var store: AppStore
+    let rhyme: RhymePair
+    @State var isMarked: Bool
+    
     var body: some View {
         HStack {
-            Text(viewModel.text)
+            Text(rhyme.text)
             Spacer()
-            Button(action: {
-                viewModel.isMarked.toggle()
-            }, label: {
-                viewModel.isMarked ? Image.Asset.filledHeart : Image.Asset.emptyHeart
+            Button(action: toggle, label: {
+                isMarked ? Image.Asset.filledHeart : Image.Asset.emptyHeart
             }).foregroundColor(Color.Asset.foreground)
         }.padding(.vertical, 8)
         .padding(.horizontal, 10)
+    }
+    
+    private func toggle() {
+        isMarked.toggle()
+        store.send(isMarked
+                    ? .markRhyme(rhyme)
+                    : .unmarkRhyme(rhyme)
+        )
     }
 }

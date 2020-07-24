@@ -10,26 +10,16 @@ import SwiftUI
 
 struct SearchRhymesView: View {
     
-    @StateObject var viewModel: SearchRhymesViewModel
-    @State var isEditing = false
+    let searchState: AppState.SearchState
+    let onTapSearch: (String) -> Void
     
-    var stateDependentView: some View {
-        switch viewModel.state {
-        case .initial:
-            return AnyView(Text("Потърси някоя рима."))
-        case .loading:
-            return AnyView(ProgressView())
-        case .failed(errorMessage: let message):
-            return AnyView(Text(message).foregroundColor(.red))
-        case .loaded:
-            return AnyView(RhymesListView(viewModel: viewModel.rhymesListViewModel))
-        }
-    }
+    @State private var searchQuery = ""
+    @State private var isEditing = false
     
     var body: some View {
         VStack {
             HStack {
-                TextField("Напиши дума...", text: $viewModel.searchQuery)
+                TextField("Напиши дума...", text: $searchQuery)
                     .padding(7)
                     .padding(.horizontal, 25)
                     .background(Color(.systemGray6))
@@ -41,9 +31,9 @@ struct SearchRhymesView: View {
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                 .padding(.leading, 8)
                      
-                            if isEditing && !viewModel.searchQuery.isEmpty {
+                            if isEditing && !searchQuery.isEmpty {
                                 Button(action: {
-                                    viewModel.searchQuery = ""
+                                    searchQuery = ""
                                 }) {
                                     Image(systemName: "multiply.circle.fill")
                                         .foregroundColor(.gray)
@@ -59,7 +49,7 @@ struct SearchRhymesView: View {
                 Button(action: {
                     isEditing = false
                     UIApplication.shared.endEditing()
-                    viewModel.searchRequested.send()
+                    onTapSearch(searchQuery)
                 }, label: {
                     Text("Римувай")
                 })
@@ -75,21 +65,26 @@ struct SearchRhymesView: View {
             Spacer()
         }
     }
+    
+    var stateDependentView: some View {
+        switch searchState {
+        case .initial:
+            return AnyView(Text("Потърси някоя рима."))
+        case .loading:
+            return AnyView(ProgressView())
+        case .failed(errorMessage: let message):
+            return AnyView(Text(message).foregroundColor(.red))
+        case .loaded(let rhymes):
+            return AnyView(RhymesListView(rhymesList: rhymes))
+        }
+    }
 }
 
 struct SearchRymesView_Previews: PreviewProvider {
-    
-    static func testViewModel(withState state: SearchRhymesViewModel.SearchState) -> SearchRhymesViewModel {
-        let result = SearchRhymesViewModel(favoritesService: FavoriteRhymesService())
-        result.state = state
-        return result
-    }
-    
     static var previews: some View {
-        SearchRhymesView(viewModel: testViewModel(withState: .initial))
-        SearchRhymesView(viewModel: testViewModel(withState: .loading))
-        SearchRhymesView(viewModel: testViewModel(withState: .loaded(rhymesResult: Array(repeating: .init(wrd: "Test", pri: 0), count: 20), searchQuery: "")))
-        SearchRhymesView(viewModel: testViewModel(withState: .failed(errorMessage: "Error")))
-
+        SearchRhymesView(searchState: .initial, onTapSearch: {_ in })
+        SearchRhymesView(searchState: .loading, onTapSearch: {_ in })
+        SearchRhymesView(searchState: .loaded(serchResults: Array(repeating: .init(word: "Test", strength: 0, parentWord: "Example"), count: 20)), onTapSearch: {_ in })
+        SearchRhymesView(searchState: .failed(errorMessage: "Error"), onTapSearch: {_ in })
     }
 }

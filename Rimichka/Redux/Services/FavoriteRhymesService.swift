@@ -10,8 +10,6 @@ import Combine
 import RealmSwift
 
 class FavoriteRhymesService {
-    let favoriteRhymes: AnyPublisher<[RhymePair], Never>
-    private let favoriteRhymesSubject = CurrentValueSubject<[RhymePair], Never>([])
     
     private let realm: Realm
     
@@ -21,40 +19,23 @@ class FavoriteRhymesService {
         } catch let error {
             fatalError("Realm failed to initialize: \(error.localizedDescription)")
         }
-        
-        favoriteRhymes = favoriteRhymesSubject.eraseToAnyPublisher()
-        
-        loadAllFromDatabase()
-    }
-    
-    func contains(_ model: RhymePair) -> Bool {
-        return favoriteRhymesSubject.value.contains(model)
     }
     
     func add(_ model: RhymePair) {
-        var models = favoriteRhymesSubject.value
-        if !models.contains(model) {
-            models.append(model)
-            favoriteRhymesSubject.send(models)
-            try? realm.write {
-                realm.add(RealmRhymePair(from: model))
-            }
+        try? realm.write {
+            realm.add(RealmRhymePair(from: model))
         }
     }
     
     func remove(_ model: RhymePair) {
-        var models = favoriteRhymesSubject.value
-        models.removeAll { $0 == model }
-        favoriteRhymesSubject.send(models)
         let realmModels = realm.objects(RealmRhymePair.self).filter { $0 == .init(from: model) }
         try? realm.write {
             realm.delete(realmModels)
         }
     }
     
-    private func loadAllFromDatabase() {
-        let saved = Array(realm.objects(RealmRhymePair.self).map { $0.asDomainModel })
-        favoriteRhymesSubject.send(saved)
+    func fetchAllSaved() -> Set<RhymePair> {
+        return Set(realm.objects(RealmRhymePair.self).map { $0.asDomainModel })
     }
 }
 

@@ -10,18 +10,26 @@ import SwiftUI
 
 struct RootView: View {
     
-    @StateObject var viewModel: RootViewModel
+    @EnvironmentObject var store: AppStore
     
     var body: some View {
         TabView {
-            SearchRhymesView(viewModel: viewModel.searchViewModel).tabItem {
+            SearchRhymesView(searchState: store.state.searchState) { query in
+                store.send(.search(query))
+            }.tabItem {
                 Image.Asset.searchMore
                 Text("Римички")
             }
-            FavoriteRhymesView(viewModel: viewModel.favoritesViewModel).tabItem {
+            FavoriteRhymesView(favoriteRhymes: store.state.favoriteRhymes.asArray).tabItem {
                 Image.Asset.searchHeart
                 Text("Любимички")
             }
         }.accentColor(Color.Asset.foreground)
+    }
+}
+
+struct RootView_Previews: PreviewProvider {
+    static var previews: some View {
+        RootView()
     }
 }

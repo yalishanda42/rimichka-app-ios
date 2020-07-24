@@ -10,24 +10,31 @@ import SwiftUI
 
 struct RhymesListView: View {
     
-    @StateObject var viewModel: RhymesListViewModel
+    @EnvironmentObject var store: AppStore
+    let rhymesList: [RhymePair]
     
     var body: some View {
-        List(viewModel.rhymeViewModels) { vm in
-            RhymesListViewRow(viewModel: vm)
+        List(rhymesList) { rhyme in
+            RhymesListViewRow(
+                rhyme: rhyme,
+                isMarked: store.state.favoriteRhymes.contains(rhyme)
+            )
         }
     }
 }
 
 struct RhymesListView_Previews: PreviewProvider {
-    
-    static var testViewModel: RhymesListViewModel {
-        let result = RhymesListViewModel()
-        result.rhymeViewModels = Array(repeating: .init(with: .rhymePair(.init(word: "Test", strength: 10, parentWord: "Example")), favoritesService: FavoriteRhymesService()), count: 20)
-        return result
+    static var previews: some View {
+        RhymesListView(rhymesList: Array(repeating: .init(word: "Test", strength: 3, parentWord: "Example"), count: 10))
+    }
+}
+
+extension RhymePair: Identifiable {
+    var text: String {
+        "\(parentWord) -> \(word)"
     }
     
-    static var previews: some View {
-        RhymesListView(viewModel: testViewModel)
+    var id: String {
+        text
     }
 }

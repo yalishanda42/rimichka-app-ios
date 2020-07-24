@@ -12,17 +12,17 @@
 		1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E022CE64C100C2E61F /* RhymePair.swift */; };
 		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
 		1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9FA54E23A123B400A3E38C /* Colors.xcassets */; };
+		74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */; };
+		74016C3824CB7BA200E1C96E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3724CB7BA200E1C96E /* AppState.swift */; };
+		74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3924CB7BA700E1C96E /* AppAction.swift */; };
+		74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3B24CB7CCC00E1C96E /* Store.swift */; };
+		74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4024CB8D9E00E1C96E /* Set+asArray.swift */; };
 		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
 		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
 		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
 		74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AA24C8CA43008921FC /* RhymesListView.swift */; };
 		74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */; };
-		74C915B024C8CB54008921FC /* RhymesListViewRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AF24C8CB54008921FC /* RhymesListViewRowViewModel.swift */; };
-		74C915B424C8CFB5008921FC /* RhymesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B324C8CFB5008921FC /* RhymesListViewModel.swift */; };
 		74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */; };
-		74C915B824C8D336008921FC /* SearchRhymesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B724C8D336008921FC /* SearchRhymesViewModel.swift */; };
-		74C915BA24C8D9A6008921FC /* FavoriteRhymesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B924C8D9A6008921FC /* FavoriteRhymesViewModel.swift */; };
-		74C915BC24C8DABA008921FC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BB24C8DABA008921FC /* RootViewModel.swift */; };
 		74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */; };
 		74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335124C8C22800C8C826 /* RimichkaApp.swift */; };
 		74EE335424C8C2A600C8C826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335324C8C2A600C8C826 /* RootView.swift */; };
@@ -40,16 +40,16 @@
 		1A1F43E022CE64C100C2E61F /* RhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymePair.swift; sourceTree = "<group>"; };
 		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
 		1A9FA54E23A123B400A3E38C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		74016C3724CB7BA200E1C96E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		74016C3924CB7BA700E1C96E /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		74016C3B24CB7CCC00E1C96E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		74016C4024CB8D9E00E1C96E /* Set+asArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+asArray.swift"; sourceTree = "<group>"; };
 		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
 		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
 		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
 		74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewRow.swift; sourceTree = "<group>"; };
-		74C915AF24C8CB54008921FC /* RhymesListViewRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewRowViewModel.swift; sourceTree = "<group>"; };
-		74C915B324C8CFB5008921FC /* RhymesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewModel.swift; sourceTree = "<group>"; };
 		74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
-		74C915B724C8D336008921FC /* SearchRhymesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRhymesViewModel.swift; sourceTree = "<group>"; };
-		74C915B924C8D9A6008921FC /* FavoriteRhymesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesViewModel.swift; sourceTree = "<group>"; };
-		74C915BB24C8DABA008921FC /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaAPIService.swift; sourceTree = "<group>"; };
 		74EE335124C8C22800C8C826 /* RimichkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaApp.swift; sourceTree = "<group>"; };
 		74EE335324C8C2A600C8C826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -91,10 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				74EE335124C8C22800C8C826 /* RimichkaApp.swift */,
+				74016C3B24CB7CCC00E1C96E /* Store.swift */,
+				74016C3F24CB80B200E1C96E /* Redux */,
 				11824AEB222DE135007DB98C /* Views */,
-				74C915AE24C8CB35008921FC /* ViewModels */,
-				11824AE0222DD15D007DB98C /* Models */,
-				74C915BF24C8F700008921FC /* Services */,
 				1AF2702C22CBA889005C7213 /* Utilities */,
 				74EE335E24C8C5A600C8C826 /* Supporting Files */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
@@ -131,20 +130,21 @@
 				74EE335A24C8C43200C8C826 /* Image+Asset.swift */,
 				74EE335C24C8C4F800C8C826 /* Color+Asset.swift */,
 				74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */,
+				74016C4024CB8D9E00E1C96E /* Set+asArray.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		74C915AE24C8CB35008921FC /* ViewModels */ = {
+		74016C3F24CB80B200E1C96E /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				74C915BB24C8DABA008921FC /* RootViewModel.swift */,
-				74C915B724C8D336008921FC /* SearchRhymesViewModel.swift */,
-				74C915B924C8D9A6008921FC /* FavoriteRhymesViewModel.swift */,
-				74C915B324C8CFB5008921FC /* RhymesListViewModel.swift */,
-				74C915AF24C8CB54008921FC /* RhymesListViewRowViewModel.swift */,
+				74016C3724CB7BA200E1C96E /* AppState.swift */,
+				74016C3924CB7BA700E1C96E /* AppAction.swift */,
+				74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */,
+				11824AE0222DD15D007DB98C /* Models */,
+				74C915BF24C8F700008921FC /* Services */,
 			);
-			path = ViewModels;
+			path = Redux;
 			sourceTree = "<group>";
 		};
 		74C915BF24C8F700008921FC /* Services */ = {
@@ -242,22 +242,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C915BC24C8DABA008921FC /* RootViewModel.swift in Sources */,
-				74C915B024C8CB54008921FC /* RhymesListViewRowViewModel.swift in Sources */,
 				74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */,
 				11262BFC22318F1B00B9E29A /* String+URLescaped.swift in Sources */,
 				74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */,
-				74C915B824C8D336008921FC /* SearchRhymesViewModel.swift in Sources */,
+				74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */,
 				74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */,
 				74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */,
 				74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */,
 				74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */,
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
-				74C915B424C8CFB5008921FC /* RhymesListViewModel.swift in Sources */,
 				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
 				7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */,
+				74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */,
+				74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */,
+				74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */,
 				74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */,
-				74C915BA24C8D9A6008921FC /* FavoriteRhymesViewModel.swift in Sources */,
+				74016C3824CB7BA200E1C96E /* AppState.swift in Sources */,
 				74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */,
 				1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */,
 				748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */,
