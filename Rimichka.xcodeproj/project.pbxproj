@@ -19,6 +19,7 @@
 		74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4024CB8D9E00E1C96E /* Set+asArray.swift */; };
 		74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74016C4224CB9FF000E1C96E /* Launch.storyboard */; };
 		74016C4524CD770D00E1C96E /* View+eraseToAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */; };
+		74016C4724CD970100E1C96E /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4624CD970100E1C96E /* AppReducer.swift */; };
 		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
 		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
 		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
@@ -49,6 +50,7 @@
 		74016C4024CB8D9E00E1C96E /* Set+asArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+asArray.swift"; sourceTree = "<group>"; };
 		74016C4224CB9FF000E1C96E /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+eraseToAnyView.swift"; sourceTree = "<group>"; };
+		74016C4624CD970100E1C96E /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
 		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
 		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
@@ -96,8 +98,10 @@
 			children = (
 				74EE335124C8C22800C8C826 /* RimichkaApp.swift */,
 				74016C3B24CB7CCC00E1C96E /* Store.swift */,
-				74016C3F24CB80B200E1C96E /* Redux */,
+				74016C4824CD986500E1C96E /* App */,
 				11824AEB222DE135007DB98C /* Views */,
+				11824AE0222DD15D007DB98C /* Models */,
+				74C915BF24C8F700008921FC /* Services */,
 				1AF2702C22CBA889005C7213 /* Utilities */,
 				74EE335E24C8C5A600C8C826 /* Supporting Files */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
@@ -140,16 +144,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		74016C3F24CB80B200E1C96E /* Redux */ = {
+		74016C4824CD986500E1C96E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				74016C4624CD970100E1C96E /* AppReducer.swift */,
 				74016C3724CB7BA200E1C96E /* AppState.swift */,
 				74016C3924CB7BA700E1C96E /* AppAction.swift */,
 				74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */,
-				11824AE0222DD15D007DB98C /* Models */,
-				74C915BF24C8F700008921FC /* Services */,
 			);
-			path = Redux;
+			path = App;
 			sourceTree = "<group>";
 		};
 		74C915BF24C8F700008921FC /* Services */ = {
@@ -261,6 +264,7 @@
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
 				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
 				7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */,
+				74016C4724CD970100E1C96E /* AppReducer.swift in Sources */,
 				74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */,
 				74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */,
 				74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */,
