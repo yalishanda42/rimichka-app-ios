@@ -71,13 +71,13 @@ struct SearchRhymesView: View {
     var stateDependentView: some View {
         switch searchState {
         case .initial:
-            return AnyView(Text("Потърси някоя рима."))
+            return Text("Потърси някоя рима.").eraseToAnyView()
         case .loading:
-            return AnyView(ProgressView())
+            return ProgressView().eraseToAnyView()
         case .failed(errorMessage: let message):
-            return AnyView(Text(message).foregroundColor(.red))
+            return Text(message).foregroundColor(.red).eraseToAnyView()
         case .loaded(let rhymes):
-            return AnyView(RhymesListView(rhymesList: rhymes))
+            return RhymesListView(rhymesList: rhymes).eraseToAnyView()
         }
     }
 }

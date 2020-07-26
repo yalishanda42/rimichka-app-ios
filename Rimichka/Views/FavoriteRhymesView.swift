@@ -14,8 +14,8 @@ struct FavoriteRhymesView: View {
         
     var body: some View {
         favoriteRhymes.isEmpty
-            ? AnyView(Text("Все още няма любими римички.").foregroundColor(Color.Asset.foreground))
-            : AnyView(RhymesListView(rhymesList: favoriteRhymes.sorted { $0.text < $1.text } ))
+            ? Text("Все още няма любими римички.").foregroundColor(Color.Asset.foreground).eraseToAnyView()
+            : RhymesListView(rhymesList: favoriteRhymes.sorted { $0.text < $1.text } ).eraseToAnyView()
     }
 }
 
