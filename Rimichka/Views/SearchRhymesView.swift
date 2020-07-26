@@ -77,7 +77,7 @@ struct SearchRhymesView: View {
         case .failed(errorMessage: let message):
             return Text(message).foregroundColor(.red).eraseToAnyView()
         case .loaded(let rhymes):
-            return RhymesListView(rhymesList: rhymes).eraseToAnyView()
+            return RhymesListView(rhymesList: rhymes, showParentWord: false).eraseToAnyView()
         }
     }
 }

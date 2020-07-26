@@ -11,12 +11,13 @@ import SwiftUI
 struct RhymesListViewRow: View {
     
     let rhyme: RhymePair
+    let showParentWord: Bool
     let isMarked: Bool
     let onTapIcon: (_ isMarkedBefore: Bool) -> Void
     
     var body: some View {
         HStack {
-            Text(rhyme.text)
+            Text(showParentWord ? rhyme.fullText : rhyme.word)
             Spacer()
             Button(action: {
                 onTapIcon(isMarked)
