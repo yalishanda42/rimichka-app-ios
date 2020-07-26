@@ -13,3 +13,9 @@ struct FetchedRhyme: Codable {
     let wrd: String // word
     let pri : Int  // strength
 }
+
+extension FetchedRhyme {
+    func asRhymePair(originalWord: String) -> RhymePair {
+        .init(word: wrd, strength: pri, parentWord: originalWord)
+    }
+}

@@ -3,47 +3,66 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11262BFC22318F1B00B9E29A /* EscapeStringForURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */; };
-		11824AC9222DCE39007DB98C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AC8222DCE39007DB98C /* AppDelegate.swift */; };
-		11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */; };
-		11824ACE222DCE39007DB98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11824ACC222DCE39007DB98C /* Main.storyboard */; };
+		11262BFC22318F1B00B9E29A /* String+URLescaped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11262BFB22318F1B00B9E29A /* String+URLescaped.swift */; };
 		11824AD3222DCE3A007DB98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11824AD2222DCE3A007DB98C /* Assets.xcassets */; };
-		11824AD6222DCE3A007DB98C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11824AD4222DCE3A007DB98C /* LaunchScreen.storyboard */; };
-		11824AE4222DD18B007DB98C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE3222DD18B007DB98C /* Networking.swift */; };
-		11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11824AE9222DDD1C007DB98C /* WordCell.swift */; };
-		1A1F43D722CE054000C2E61F /* Rimichka.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */; };
-		1A1F43DB22CE2CF800C2E61F /* FavoriteRhymesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43DA22CE2CF800C2E61F /* FavoriteRhymesViewController.swift */; };
 		1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E022CE64C100C2E61F /* RhymePair.swift */; };
 		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
-		1A320FF522CCC534008C1CE8 /* FavoriteRhymes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */; };
-		1A320FFB22CCCE3C008C1CE8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */; };
 		1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9FA54E23A123B400A3E38C /* Colors.xcassets */; };
+		74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */; };
+		74016C3824CB7BA200E1C96E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3724CB7BA200E1C96E /* AppState.swift */; };
+		74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3924CB7BA700E1C96E /* AppAction.swift */; };
+		74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3B24CB7CCC00E1C96E /* Store.swift */; };
+		74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4024CB8D9E00E1C96E /* Set+asArray.swift */; };
+		74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74016C4224CB9FF000E1C96E /* Launch.storyboard */; };
+		74016C4524CD770D00E1C96E /* View+eraseToAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */; };
+		74016C4724CD970100E1C96E /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4624CD970100E1C96E /* AppReducer.swift */; };
+		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
+		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
+		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
+		74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AA24C8CA43008921FC /* RhymesListView.swift */; };
+		74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */; };
+		74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */; };
+		74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */; };
+		74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335124C8C22800C8C826 /* RimichkaApp.swift */; };
+		74EE335424C8C2A600C8C826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335324C8C2A600C8C826 /* RootView.swift */; };
+		74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335524C8C35100C8C826 /* SearchRhymesView.swift */; };
+		74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */; };
+		74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335A24C8C43200C8C826 /* Image+Asset.swift */; };
+		74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EE335C24C8C4F800C8C826 /* Color+Asset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapeStringForURL.swift; sourceTree = "<group>"; };
-		11824AC5222DCE39007DB98C /* Римичка.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Римичка.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11824AC8222DCE39007DB98C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeMeViewController.swift; sourceTree = "<group>"; };
-		11824ACD222DCE39007DB98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		11824AD0222DCE39007DB98C /* Rimichka.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rimichka.xcdatamodel; sourceTree = "<group>"; };
+		11262BFB22318F1B00B9E29A /* String+URLescaped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLescaped.swift"; sourceTree = "<group>"; };
+		11824AC5222DCE39007DB98C /* Rimichka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rimichka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11824AD2222DCE3A007DB98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		11824AD5222DCE3A007DB98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11824AD7222DCE3A007DB98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11824AE3222DD18B007DB98C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		11824AE9222DDD1C007DB98C /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
-		1A1F43DA22CE2CF800C2E61F /* FavoriteRhymesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesViewController.swift; sourceTree = "<group>"; };
-		1A1F43DC22CE3AD100C2E61F /* RhymeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RhymeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1A1F43DD22CE3AD100C2E61F /* RhymeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RhymeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1A1F43E022CE64C100C2E61F /* RhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymePair.swift; sourceTree = "<group>"; };
 		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
-		1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymes.swift; sourceTree = "<group>"; };
-		1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		1A9FA54E23A123B400A3E38C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		74016C3724CB7BA200E1C96E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		74016C3924CB7BA700E1C96E /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		74016C3B24CB7CCC00E1C96E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		74016C4024CB8D9E00E1C96E /* Set+asArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+asArray.swift"; sourceTree = "<group>"; };
+		74016C4224CB9FF000E1C96E /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+eraseToAnyView.swift"; sourceTree = "<group>"; };
+		74016C4624CD970100E1C96E /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
+		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
+		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
+		74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewRow.swift; sourceTree = "<group>"; };
+		74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
+		74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaAPIService.swift; sourceTree = "<group>"; };
+		74EE335124C8C22800C8C826 /* RimichkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RimichkaApp.swift; sourceTree = "<group>"; };
+		74EE335324C8C2A600C8C826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		74EE335524C8C35100C8C826 /* SearchRhymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRhymesView.swift; sourceTree = "<group>"; };
+		74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesView.swift; sourceTree = "<group>"; };
+		74EE335A24C8C43200C8C826 /* Image+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Asset.swift"; sourceTree = "<group>"; };
+		74EE335C24C8C4F800C8C826 /* Color+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Asset.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +88,7 @@
 		11824AC6222DCE39007DB98C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11824AC5222DCE39007DB98C /* Римичка.app */,
+				11824AC5222DCE39007DB98C /* Rimichka.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,27 +96,17 @@
 		11824AC7222DCE39007DB98C /* Rimichka */ = {
 			isa = PBXGroup;
 			children = (
-				11824AC8222DCE39007DB98C /* AppDelegate.swift */,
-				11824AE0222DD15D007DB98C /* Models */,
+				74EE335124C8C22800C8C826 /* RimichkaApp.swift */,
+				74016C3B24CB7CCC00E1C96E /* Store.swift */,
+				74016C4824CD986500E1C96E /* App */,
 				11824AEB222DE135007DB98C /* Views */,
-				11824ADF222DD139007DB98C /* ViewControllers */,
-				1AF2702922CBA3AA005C7213 /* Storyboards */,
+				11824AE0222DD15D007DB98C /* Models */,
+				74C915BF24C8F700008921FC /* Services */,
 				1AF2702C22CBA889005C7213 /* Utilities */,
-				11824AD2222DCE3A007DB98C /* Assets.xcassets */,
-				1A9FA54E23A123B400A3E38C /* Colors.xcassets */,
+				74EE335E24C8C5A600C8C826 /* Supporting Files */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
-				11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */,
 			);
 			path = Rimichka;
-			sourceTree = "<group>";
-		};
-		11824ADF222DD139007DB98C /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				11824ACA222DCE39007DB98C /* RhymeMeViewController.swift */,
-				1A1F43DA22CE2CF800C2E61F /* FavoriteRhymesViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		11824AE0222DD15D007DB98C /* Models */ = {
@@ -104,46 +114,64 @@
 			children = (
 				1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */,
 				1A1F43E022CE64C100C2E61F /* RhymePair.swift */,
-				1A320FF422CCC534008C1CE8 /* FavoriteRhymes.swift */,
-				1A1F43DC22CE3AD100C2E61F /* RhymeEntity+CoreDataClass.swift */,
-				1A1F43DD22CE3AD100C2E61F /* RhymeEntity+CoreDataProperties.swift */,
+				7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		11824AE6222DDC4B007DB98C /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				11824AE9222DDD1C007DB98C /* WordCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		11824AEB222DE135007DB98C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				11824AE6222DDC4B007DB98C /* Cells */,
+				74EE335324C8C2A600C8C826 /* RootView.swift */,
+				74EE335524C8C35100C8C826 /* SearchRhymesView.swift */,
+				74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */,
+				74C915AA24C8CA43008921FC /* RhymesListView.swift */,
+				74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1AF2702922CBA3AA005C7213 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				11824ACC222DCE39007DB98C /* Main.storyboard */,
-				11824AD4222DCE3A007DB98C /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		1AF2702C22CBA889005C7213 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1A320FFA22CCCE3C008C1CE8 /* DatabaseManager.swift */,
-				11824AE3222DD18B007DB98C /* Networking.swift */,
-				11262BFB22318F1B00B9E29A /* EscapeStringForURL.swift */,
+				11262BFB22318F1B00B9E29A /* String+URLescaped.swift */,
+				74EE335A24C8C43200C8C826 /* Image+Asset.swift */,
+				74EE335C24C8C4F800C8C826 /* Color+Asset.swift */,
+				74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */,
+				74016C4024CB8D9E00E1C96E /* Set+asArray.swift */,
+				74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		74016C4824CD986500E1C96E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				74016C4624CD970100E1C96E /* AppReducer.swift */,
+				74016C3724CB7BA200E1C96E /* AppState.swift */,
+				74016C3924CB7BA700E1C96E /* AppAction.swift */,
+				74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		74C915BF24C8F700008921FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */,
+				748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74EE335E24C8C5A600C8C826 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11824AD2222DCE3A007DB98C /* Assets.xcassets */,
+				1A9FA54E23A123B400A3E38C /* Colors.xcassets */,
+				74016C4224CB9FF000E1C96E /* Launch.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +190,11 @@
 			dependencies = (
 			);
 			name = Rimichka;
+			packageProductDependencies = (
+				7443CC3524C9FCD2008830C7 /* RealmSwift */,
+			);
 			productName = Rimichka;
-			productReference = 11824AC5222DCE39007DB98C /* Римичка.app */;
+			productReference = 11824AC5222DCE39007DB98C /* Rimichka.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +204,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Yalishanda;
 				TargetAttributes = {
 					11824AC4222DCE39007DB98C = {
@@ -191,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 11824ABC222DCE39007DB98C;
+			packageReferences = (
+				7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 11824AC6222DCE39007DB98C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,10 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11824AD6222DCE3A007DB98C /* LaunchScreen.storyboard in Resources */,
 				1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */,
 				11824AD3222DCE3A007DB98C /* Assets.xcassets in Resources */,
-				11824ACE222DCE39007DB98C /* Main.storyboard in Resources */,
+				74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,40 +252,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11824AEA222DDD1C007DB98C /* WordCell.swift in Sources */,
-				1A320FFB22CCCE3C008C1CE8 /* DatabaseManager.swift in Sources */,
-				11824ACB222DCE39007DB98C /* RhymeMeViewController.swift in Sources */,
-				11824AE4222DD18B007DB98C /* Networking.swift in Sources */,
-				11262BFC22318F1B00B9E29A /* EscapeStringForURL.swift in Sources */,
+				74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */,
+				11262BFC22318F1B00B9E29A /* String+URLescaped.swift in Sources */,
+				74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */,
+				74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */,
+				74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */,
+				74016C4524CD770D00E1C96E /* View+eraseToAnyView.swift in Sources */,
+				74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */,
+				74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */,
+				74EE335224C8C22800C8C826 /* RimichkaApp.swift in Sources */,
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
-				11824AC9222DCE39007DB98C /* AppDelegate.swift in Sources */,
-				1A1F43DB22CE2CF800C2E61F /* FavoriteRhymesViewController.swift in Sources */,
-				1A320FF522CCC534008C1CE8 /* FavoriteRhymes.swift in Sources */,
+				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
+				7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */,
+				74016C4724CD970100E1C96E /* AppReducer.swift in Sources */,
+				74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */,
+				74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */,
+				74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */,
+				74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */,
+				74016C3824CB7BA200E1C96E /* AppState.swift in Sources */,
+				74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */,
 				1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */,
-				1A1F43D722CE054000C2E61F /* Rimichka.xcdatamodeld in Sources */,
+				748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */,
+				74EE335424C8C2A600C8C826 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		11824ACC222DCE39007DB98C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11824ACD222DCE39007DB98C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		11824AD4222DCE3A007DB98C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11824AD5222DCE3A007DB98C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		11824AD8222DCE3A007DB98C /* Debug */ = {
@@ -281,6 +306,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -290,6 +316,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -306,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,6 +369,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -352,6 +380,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -361,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -375,16 +404,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rimichka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
-				PRODUCT_NAME = "Римичка";
+				PRODUCT_NAME = Rimichka;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,16 +426,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4643PTS49B;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Rimichka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bg.yalishanda.Rimichka;
-				PRODUCT_NAME = "Римичка";
+				PRODUCT_NAME = Rimichka;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,18 +467,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		11824ACF222DCE39007DB98C /* Rimichka.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				11824AD0222DCE39007DB98C /* Rimichka.xcdatamodel */,
-			);
-			currentVersion = 11824AD0222DCE39007DB98C /* Rimichka.xcdatamodel */;
-			path = Rimichka.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7443CC3524C9FCD2008830C7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7443CC3424C9FCD2008830C7 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11824ABD222DCE39007DB98C /* Project object */;
 }
