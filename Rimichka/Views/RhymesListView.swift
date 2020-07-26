@@ -17,7 +17,13 @@ struct RhymesListView: View {
         List(rhymesList) { rhyme in
             RhymesListViewRow(
                 rhyme: rhyme,
-                isMarked: store.state.favoriteRhymes.contains(rhyme)
+                isMarked: store.state.favoriteRhymes.contains(rhyme),
+                onTapIcon: { isMarkedBefore in
+                    store.send(isMarkedBefore
+                                ? .unmarkRhyme(rhyme)
+                                : .markRhyme(rhyme)
+                    )
+                }
             )
         }
     }
