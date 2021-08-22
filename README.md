@@ -1,5 +1,5 @@
 # Римичка
-[![Build Status](https://app.bitrise.io/app/66444ac1d825e7c7/status.svg?token=1U2G62rE-MN8nra13V649g)](https://app.bitrise.io/app/66444ac1d825e7c7)
+[![Build](https://github.com/allexks/rimichka-app-ios/actions/workflows/build.yml/badge.svg)](https://github.com/allexks/rimichka-app-ios/actions/workflows/build.yml)
 
 Built for iOS 14+ using **SwiftUI 2.0**, **Combine** and ***redux***-like architecture. Persistence implemented using **Realm**.
 
