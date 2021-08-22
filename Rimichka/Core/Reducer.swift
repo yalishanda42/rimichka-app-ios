@@ -22,11 +22,7 @@ enum AppReducer {
             state.searchState = .loading
             return environment.apiService
                 .rhymesForWord(query)
-                .map { list in
-                    list.map { fetched in
-                        fetched.asRhymePair(originalWord: query)
-                    }
-                }.map { .setSearchResults($0) }
+                .map { .setSearchResults($0) }
                 .catch({ error -> Just<AppAction> in
                     return Just(.failSearch(errorMessage: error.message))
                 }).eraseToAnyPublisher()

@@ -33,7 +33,7 @@ struct RhymesListView: View {
 
 struct RhymesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RhymesListView(rhymesList: Array(repeating: .init(word: "Test", strength: 3, parentWord: "Example"), count: 10), showParentWord: true)
+        RhymesListView(rhymesList: Array(repeating: .init(word: "Test", parentWord: "Example"), count: 10), showParentWord: true)
     }
 }
 

@@ -22,6 +22,6 @@ struct FavoriteRhymesView: View {
 struct FavoriteRhymesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteRhymesView(favoriteRhymes: [])
-        FavoriteRhymesView(favoriteRhymes: Array(repeating: .init(word: "Test", strength: 2, parentWord: "Example"), count: 10))
+        FavoriteRhymesView(favoriteRhymes: Array(repeating: .init(word: "Test", parentWord: "Example"), count: 10))
     }
 }

@@ -12,17 +12,18 @@
 		1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E022CE64C100C2E61F /* RhymePair.swift */; };
 		1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */; };
 		1A9FA54F23A123B400A3E38C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9FA54E23A123B400A3E38C /* Colors.xcassets */; };
-		74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */; };
-		74016C3824CB7BA200E1C96E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3724CB7BA200E1C96E /* AppState.swift */; };
-		74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3924CB7BA700E1C96E /* AppAction.swift */; };
+		74016C3624CB7B9C00E1C96E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3524CB7B9C00E1C96E /* Environment.swift */; };
+		74016C3824CB7BA200E1C96E /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3724CB7BA200E1C96E /* States.swift */; };
+		74016C3A24CB7BA700E1C96E /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3924CB7BA700E1C96E /* Actions.swift */; };
 		74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C3B24CB7CCC00E1C96E /* Store.swift */; };
 		74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4024CB8D9E00E1C96E /* Set+asArray.swift */; };
 		74016C4324CB9FF000E1C96E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74016C4224CB9FF000E1C96E /* Launch.storyboard */; };
 		74016C4524CD770D00E1C96E /* View+eraseToAnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */; };
-		74016C4724CD970100E1C96E /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4624CD970100E1C96E /* AppReducer.swift */; };
+		74016C4724CD970100E1C96E /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74016C4624CD970100E1C96E /* Reducer.swift */; };
 		7443CC3624C9FCD2008830C7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7443CC3524C9FCD2008830C7 /* RealmSwift */; };
 		7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */; };
 		748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */; };
+		74C88FF426D2A91C00D5E5EB /* APIError+message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C88FF326D2A91C00D5E5EB /* APIError+message.swift */; };
 		74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AA24C8CA43008921FC /* RhymesListView.swift */; };
 		74C915AD24C8CB12008921FC /* RhymesListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */; };
 		74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */; };
@@ -43,16 +44,17 @@
 		1A1F43E022CE64C100C2E61F /* RhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymePair.swift; sourceTree = "<group>"; };
 		1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedRhyme.swift; sourceTree = "<group>"; };
 		1A9FA54E23A123B400A3E38C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
-		74016C3724CB7BA200E1C96E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		74016C3924CB7BA700E1C96E /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		74016C3524CB7B9C00E1C96E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		74016C3724CB7BA200E1C96E /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
+		74016C3924CB7BA700E1C96E /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		74016C3B24CB7CCC00E1C96E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		74016C4024CB8D9E00E1C96E /* Set+asArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+asArray.swift"; sourceTree = "<group>"; };
 		74016C4224CB9FF000E1C96E /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+eraseToAnyView.swift"; sourceTree = "<group>"; };
-		74016C4624CD970100E1C96E /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		74016C4624CD970100E1C96E /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRhymePair.swift; sourceTree = "<group>"; };
 		748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRhymesService.swift; sourceTree = "<group>"; };
+		74C88FF326D2A91C00D5E5EB /* APIError+message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+message.swift"; sourceTree = "<group>"; };
 		74C915AA24C8CA43008921FC /* RhymesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListView.swift; sourceTree = "<group>"; };
 		74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymesListViewRow.swift; sourceTree = "<group>"; };
 		74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+endEditing.swift"; sourceTree = "<group>"; };
@@ -96,70 +98,127 @@
 		11824AC7222DCE39007DB98C /* Rimichka */ = {
 			isa = PBXGroup;
 			children = (
-				74EE335124C8C22800C8C826 /* RimichkaApp.swift */,
-				74016C3B24CB7CCC00E1C96E /* Store.swift */,
-				74016C4824CD986500E1C96E /* App */,
-				11824AEB222DE135007DB98C /* Views */,
-				11824AE0222DD15D007DB98C /* Models */,
-				74C915BF24C8F700008921FC /* Services */,
-				1AF2702C22CBA889005C7213 /* Utilities */,
+				74016C4824CD986500E1C96E /* Core */,
+				74C88FFA26D2AD7900D5E5EB /* App */,
+				1AF2702C22CBA889005C7213 /* Extensions */,
 				74EE335E24C8C5A600C8C826 /* Supporting Files */,
 				11824AD7222DCE3A007DB98C /* Info.plist */,
 			);
 			path = Rimichka;
 			sourceTree = "<group>";
 		};
-		11824AE0222DD15D007DB98C /* Models */ = {
+		11824AEB222DE135007DB98C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */,
+				74C88FFC26D2B11C00D5E5EB /* Reusable */,
+				74EE335324C8C2A600C8C826 /* RootView.swift */,
+				74EE335524C8C35100C8C826 /* SearchRhymesView.swift */,
+				74C915AA24C8CA43008921FC /* RhymesListView.swift */,
+				74C88FF126D2A90700D5E5EB /* Extensions */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AF2702C22CBA889005C7213 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74016C4024CB8D9E00E1C96E /* Set+asArray.swift */,
+				11262BFB22318F1B00B9E29A /* String+URLescaped.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74016C4824CD986500E1C96E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74C88FE926D2A5AE00D5E5EB /* Models */,
+				74016C3724CB7BA200E1C96E /* States.swift */,
+				74016C3924CB7BA700E1C96E /* Actions.swift */,
+				74016C4624CD970100E1C96E /* Reducer.swift */,
+				74016C3524CB7B9C00E1C96E /* Environment.swift */,
+				74016C3B24CB7CCC00E1C96E /* Store.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		74C88FE926D2A5AE00D5E5EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				1A1F43E022CE64C100C2E61F /* RhymePair.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74C88FEB26D2A72300D5E5EB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				74C88FF826D2A9BF00D5E5EB /* Models */,
+				74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		74C88FEC26D2A73300D5E5EB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				74C88FF726D2A9BB00D5E5EB /* Models */,
+				748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		74C88FF126D2A90700D5E5EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74C88FF326D2A91C00D5E5EB /* APIError+message.swift */,
+				74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */,
+				74EE335A24C8C43200C8C826 /* Image+Asset.swift */,
+				74EE335C24C8C4F800C8C826 /* Color+Asset.swift */,
+				74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74C88FF726D2A9BB00D5E5EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				7443CC3724C9FFC1008830C7 /* RealmRhymePair.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		11824AEB222DE135007DB98C /* Views */ = {
+		74C88FF826D2A9BF00D5E5EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74EE335324C8C2A600C8C826 /* RootView.swift */,
-				74EE335524C8C35100C8C826 /* SearchRhymesView.swift */,
-				74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */,
-				74C915AA24C8CA43008921FC /* RhymesListView.swift */,
-				74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */,
+				1A1F43E222CE64F600C2E61F /* FetchedRhyme.swift */,
 			);
-			path = Views;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		1AF2702C22CBA889005C7213 /* Utilities */ = {
+		74C88FFA26D2AD7900D5E5EB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				11262BFB22318F1B00B9E29A /* String+URLescaped.swift */,
-				74EE335A24C8C43200C8C826 /* Image+Asset.swift */,
-				74EE335C24C8C4F800C8C826 /* Color+Asset.swift */,
-				74C915B524C8D2BA008921FC /* UIApplication+endEditing.swift */,
-				74016C4024CB8D9E00E1C96E /* Set+asArray.swift */,
-				74016C4424CD770D00E1C96E /* View+eraseToAnyView.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		74016C4824CD986500E1C96E /* App */ = {
-			isa = PBXGroup;
-			children = (
-				74016C4624CD970100E1C96E /* AppReducer.swift */,
-				74016C3724CB7BA200E1C96E /* AppState.swift */,
-				74016C3924CB7BA700E1C96E /* AppAction.swift */,
-				74016C3524CB7B9C00E1C96E /* AppEnvironment.swift */,
+				74EE335124C8C22800C8C826 /* RimichkaApp.swift */,
+				11824AEB222DE135007DB98C /* Views */,
+				74C915BF24C8F700008921FC /* Services */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		74C88FFC26D2B11C00D5E5EB /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				74C915AC24C8CB12008921FC /* RhymesListViewRow.swift */,
+				74EE335724C8C35A00C8C826 /* FavoriteRhymesView.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		74C915BF24C8F700008921FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				74C915BD24C8ED35008921FC /* RimichkaAPIService.swift */,
-				748F326224C9D6B90043BF57 /* FavoriteRhymesService.swift */,
+				74C88FEB26D2A72300D5E5EB /* API */,
+				74C88FEC26D2A73300D5E5EB /* Database */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,7 +314,7 @@
 				74EE335D24C8C4F800C8C826 /* Color+Asset.swift in Sources */,
 				11262BFC22318F1B00B9E29A /* String+URLescaped.swift in Sources */,
 				74EE335624C8C35100C8C826 /* SearchRhymesView.swift in Sources */,
-				74016C3A24CB7BA700E1C96E /* AppAction.swift in Sources */,
+				74016C3A24CB7BA700E1C96E /* Actions.swift in Sources */,
 				74EE335B24C8C43200C8C826 /* Image+Asset.swift in Sources */,
 				74016C4524CD770D00E1C96E /* View+eraseToAnyView.swift in Sources */,
 				74C915B624C8D2BA008921FC /* UIApplication+endEditing.swift in Sources */,
@@ -264,13 +323,14 @@
 				1A1F43E322CE64F600C2E61F /* FetchedRhyme.swift in Sources */,
 				74C915AB24C8CA43008921FC /* RhymesListView.swift in Sources */,
 				7443CC3824C9FFC1008830C7 /* RealmRhymePair.swift in Sources */,
-				74016C4724CD970100E1C96E /* AppReducer.swift in Sources */,
+				74016C4724CD970100E1C96E /* Reducer.swift in Sources */,
 				74016C3C24CB7CCC00E1C96E /* Store.swift in Sources */,
-				74016C3624CB7B9C00E1C96E /* AppEnvironment.swift in Sources */,
+				74016C3624CB7B9C00E1C96E /* Environment.swift in Sources */,
 				74016C4124CB8D9E00E1C96E /* Set+asArray.swift in Sources */,
 				74C915BE24C8ED35008921FC /* RimichkaAPIService.swift in Sources */,
-				74016C3824CB7BA200E1C96E /* AppState.swift in Sources */,
+				74016C3824CB7BA200E1C96E /* States.swift in Sources */,
 				74EE335824C8C35A00C8C826 /* FavoriteRhymesView.swift in Sources */,
+				74C88FF426D2A91C00D5E5EB /* APIError+message.swift in Sources */,
 				1A1F43E122CE64C100C2E61F /* RhymePair.swift in Sources */,
 				748F326324C9D6B90043BF57 /* FavoriteRhymesService.swift in Sources */,
 				74EE335424C8C2A600C8C826 /* RootView.swift in Sources */,

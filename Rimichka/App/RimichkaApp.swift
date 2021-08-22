@@ -14,7 +14,10 @@ struct RimichkaApp: App {
     private let store = AppStore(
         initialState: .init(),
         reducer: AppReducer.reduce,
-        environment: .init()
+        environment: .init(
+            apiService: RimichkaAPIService(),
+            dbService: RealmService()
+        )
     )
     
     var body: some Scene {

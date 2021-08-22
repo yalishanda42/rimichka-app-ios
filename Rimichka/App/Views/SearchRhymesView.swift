@@ -86,7 +86,7 @@ struct SearchRymesView_Previews: PreviewProvider {
     static var previews: some View {
         SearchRhymesView(searchState: .initial)
         SearchRhymesView(searchState: .loading)
-        SearchRhymesView(searchState: .loaded(serchResults: Array(repeating: .init(word: "Test", strength: 0, parentWord: "Example"), count: 20)))
+        SearchRhymesView(searchState: .loaded(serchResults: Array(repeating: .init(word: "Test", parentWord: "Example"), count: 20)))
         SearchRhymesView(searchState: .failed(errorMessage: "Error"))
     }
 }

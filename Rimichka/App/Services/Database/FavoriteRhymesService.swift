@@ -9,7 +9,7 @@
 import Combine
 import RealmSwift
 
-class FavoriteRhymesService {
+class RealmService: DatabaseService {
     
     private let realm: Realm
     
@@ -43,12 +43,11 @@ extension RealmRhymePair {
     convenience init(from pair: RhymePair) {
         self.init()
         self.word = pair.word
-        self.strength = pair.strength
         self.parentWord = pair.parentWord
     }
     
     var asDomainModel: RhymePair {
-        .init(word: word, strength: strength, parentWord: parentWord)
+        .init(word: word, parentWord: parentWord)
     }
     
     static func == (lhs: RealmRhymePair, rhs: RealmRhymePair) -> Bool {

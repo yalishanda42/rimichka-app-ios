@@ -12,6 +12,5 @@ import Foundation
 /// The parent word describes a word that the user types in order to search for rhymes.
 struct RhymePair: Codable, Equatable, Hashable {
     let word: String
-    let strength: Int
     var parentWord: String
 }
